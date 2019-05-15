@@ -1,0 +1,20 @@
+DEFINICION       --->  Línea 0 correcta. 
+U = { 0,  1,  2,  3,  4,  5,  6,  7,  1 0 0, a, b, c }       ---> No reconocido '0' en línea 1 columna 5. 
+A = {  1,  2,  3,  4 }       ---> No reconocido '1' en línea 2 columna 6. 
+B = {  2,  3,  5,  6 }       ---> No reconocido '2' en línea 3 columna 6. 
+C = {  3,  5,  7,  8 }       ---> No reconocido '3' en línea 4 columna 6. 
+D = {  0 }       ---> No reconocido '0' en línea 5 columna 6. 
+E = { a }       --->  Línea 6 correcta. 
+F = { }       --->  Línea 7 correcta. 
+
+OPERACION       --->  Línea 9 correcta. 
+A & B       --->  Línea 10 correcta. 
+A&B       --->  Línea 11 correcta. 
+(A&B)       --->  Línea 12 correcta. 
+A$B       --->  Línea 13 correcta. 
+A $ B       --->  Línea 14 correcta. 
+A / B       --->  Línea 15 correcta. 
+A & E       --->  Línea 16 correcta. 
+A * E       --->  Línea 17 correcta. 
+A^c       --->  Línea 18 correcta. 
+
