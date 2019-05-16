@@ -23,9 +23,14 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="pathLabel" min="-2" pref="1000" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="selectButton" min="-2" pref="220" max="-2" attributes="0"/>
+                  </Group>
                   <Group type="102" attributes="0">
                       <Component id="checkLexical" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -34,11 +39,6 @@
                       <Component id="checkSemantic" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="analyzeButton" min="-2" pref="477" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="pathLabel" min="-2" pref="991" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="selectButton" min="-2" pref="220" max="-2" attributes="0"/>
                   </Group>
                   <Component id="scrollPanel" alignment="1" min="-2" pref="1245" max="-2" attributes="0"/>
               </Group>
@@ -56,14 +56,14 @@
                   <Component id="checkSemantic" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="analyzeButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-              <Component id="scrollPanel" min="-2" pref="762" max="-2" attributes="0"/>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="scrollPanel" min="-2" pref="538" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="selectButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="pathLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="selectButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="18" max="32767" attributes="0"/>
+              <EmptySpace pref="32" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -100,19 +100,9 @@
         <Component class="javax.swing.JTable" name="responseTable">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="2" rowCount="4">
-                <Column editable="true" title="Linea" type="java.lang.String">
-                  <Data value="asd&#xf1;f jlaskdf jlsakdf jlksadfj lsa&#xf1;kdfjaslk&#xf1;dfjasdl&#xf1;kfjasdl&#xf1;kfj asdl&#xf1;kfj asdl&#xf1; fasdlj asdljf sla&#xf1;dkjf as&#xf1;dlkfj &#xf1;lskajdfl &#xf1;ksjadf lk&#xf1;jsadf &#xf1;lkjasdf lk&#xf1;jasdfl&#xf1;kjasdf l&#xf1;kjasdf lk&#xf1;jasdf lk&#xf1;jasdflk &#xf1;jasdf&#xf1;lkj asdf "/>
-                  <Data value="2"/>
-                  <Data value="3"/>
-                  <Data value="4"/>
-                </Column>
-                <Column editable="false" title="Respuesta" type="java.lang.Object">
-                  <Data value="asdflk&#xf1; asdjlk&#xf1; as&#xf1;ldkjf sa&#xf1;lkdjf asljk&#xf1;f asd&#xf1;lkjf sad&#xf1;ljkfasdk&#xf1;jlfjk&#xf1;lsdafjk&#xf1;lf saklj&#xf1;f sadjk&#xf1;lf sajk&#xf1;lf asjk&#xf1;ldf asdljk&#xf1;f asdjkl&#xf1;f asdjk&#xf1;lf asdk&#xf1;jlf asd&#xf1;lkjf ask&#xf1;ljf ask&#xf1;ljfasd&#xf1;kljf &#xf1;ljkasdfiopwqerjioph sapof8d7u sadf poiweqjpor2o8i aswl&#xf1;dkfjas&#xf1;lkdjf qowp8ru &#xf1;lsidjaf &#xf1;oiasdf "/>
-                  <Data value="Aceptado"/>
-                  <Data value="Aceptado"/>
-                  <Data value="HI"/>
-                </Column>
+              <Table columnCount="2" rowCount="0">
+                <Column editable="true" title="Linea" type="java.lang.String"/>
+                <Column editable="false" title="Respuesta" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">

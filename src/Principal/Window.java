@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 
 
@@ -17,6 +18,8 @@ public class Window extends javax.swing.JFrame {
     public Window() {
         initComponents();
         analyzeButton.setEnabled(false);
+        //centrar ventana
+        this.setLocationRelativeTo(null);
     }
 
 
@@ -95,10 +98,7 @@ public class Window extends javax.swing.JFrame {
 
         responseTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"asdñf jlaskdf jlsakdf jlksadfj lsañkdfjaslkñdfjasdlñkfjasdlñkfj asdlñkfj asdlñ fasdlj asdljf slañdkjf asñdlkfj ñlskajdfl ñksjadf lkñjsadf ñlkjasdf lkñjasdflñkjasdf lñkjasdf lkñjasdf lkñjasdflk ñjasdfñlkj asdf ", "asdflkñ asdjlkñ asñldkjf sañlkdjf asljkñf asdñlkjf sadñljkfasdkñjlfjkñlsdafjkñlf sakljñf sadjkñlf sajkñlf asjkñldf asdljkñf asdjklñf asdjkñlf asdkñjlf asdñlkjf askñljf askñljfasdñkljf ñljkasdfiopwqerjioph sapof8d7u sadf poiweqjpor2o8i aswlñdkfjasñlkdjf qowp8ru ñlsidjaf ñoiasdf "},
-                {"2", "Aceptado"},
-                {"3", "Aceptado"},
-                {"4", "HI"}
+
             },
             new String [] {
                 "Linea", "Respuesta"
@@ -148,6 +148,10 @@ public class Window extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(pathLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(selectButton, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(checkLexical)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -156,10 +160,6 @@ public class Window extends javax.swing.JFrame {
                         .addComponent(checkSemantic)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(analyzeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(pathLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 991, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(selectButton, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(scrollPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1245, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
@@ -173,12 +173,12 @@ public class Window extends javax.swing.JFrame {
                     .addComponent(checkSemantic)
                     .addComponent(analyzeButton))
                 .addGap(18, 18, 18)
-                .addComponent(scrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 762, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(scrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(selectButton)
-                    .addComponent(pathLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                    .addComponent(pathLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(selectButton))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
@@ -205,15 +205,26 @@ public class Window extends javax.swing.JFrame {
     }//GEN-LAST:event_selectButtonActionPerformed
 
     private void analyzeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_analyzeButtonActionPerformed
+        
+        clearTable();
         Lexical lexical = new Lexical();
+        Response response;
         try {
             lexical.Analizar(ubicacionArchivo);
+            response = lexical.getResult();
+            drawTable(response);
+            
+            
             
         } catch (IOException ex) {
             Logger.getLogger(Window.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_analyzeButtonActionPerformed
-
+    
+    public void clearTable(){
+        DefaultTableModel model = (DefaultTableModel) responseTable.getModel();
+        model.setRowCount(0);
+    }
     
     public void setFile() {
         //Ventana para ubicación del archivo
@@ -234,6 +245,16 @@ public class Window extends javax.swing.JFrame {
             //Se limpia el label
             clear();
         }
+    }
+    
+    public void drawTable(Response response){
+        
+        DefaultTableModel model = (DefaultTableModel) responseTable.getModel();
+        for (int i = 0; i < response.inputs.size(); i++) {
+            model.addRow(new Object[]{response.inputs.get(i), response.responses.get(i) });
+        }
+        
+        
     }
      
     public void clear(){

@@ -1,6 +1,9 @@
 
 package Analyzers;
 
+import Generators.LexicalLexer;
+import Principal.Token;
+import static Principal.Token.*;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -8,23 +11,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Reader;
 import javax.swing.JOptionPane;
-import Principal.Token;
-import static Principal.Token.*;
-import java.util.ArrayList;
-import java.util.List;
-import Generators.LexicalLexer;
 
 
-
-public class Lexical {
-    List<String> listaErrores;
-
-    public Lexical() {
-         listaErrores = new ArrayList<String>();
-    }
-    
-    
-     public void Analizar(String ubicacionArchivo) throws FileNotFoundException, IOException{
+public class Lexical extends Analyzer{
+   
+      public void Analizar(String ubicacionArchivo) throws FileNotFoundException, IOException{
 
         // Se crea el objeto que generará el reporte
         PrintWriter archivoReporte = new PrintWriter("Salida.txt", "UTF-8");
@@ -79,20 +70,24 @@ public class Lexical {
                 //Si se encuentra una nueva línea
                 case NUEVA_LINEA:
                     //Si las cadenas no están vacías (Esto se da cuando solo se encuentran errores)
-
+                        inputs.add(cadenaOriginal);
+                        
                         //Se guarda la cadenaOriginal leida y la cadena de tokens separada por una flecha
                         String finLinea = "\n";
                         if(!line_operation && "".equals(cadenaOriginal) ){
                             cadenaReporte = cadenaReporte + finLinea;
+                            responses.add("Aceptado");
                             continue;
                         }
 
                         line_operation = false;
                         if(!errors){
                             cadenaReporte = cadenaReporte + cadenaOriginal + "       --->  Línea "+ lexer.line_count + " correcta. \n"; //+ cadenaTokens + finLinea;
+                            responses.add("Aceptado");
                         }
                         else{
                             cadenaReporte = cadenaReporte + cadenaOriginal + "       ---> "+  cadenaTokens + finLinea;
+                            responses.add(cadenaTokens);
                             errors = false;
                         }
                         
@@ -142,16 +137,4 @@ public class Lexical {
     }
      
      
-     public boolean existeError(String stringError){
-        //Se recorren todos los elementos en la lista
-        for(String error: listaErrores) {
-            //Se comprueba si conicide con el error enviado
-            if(error.trim().contains(stringError))
-               return true;
-        }
-        return false;
-    }
-
-
-    
 }

@@ -1,0 +1,4 @@
+Prueba 1: Pizza.
+Prueba 2: Error al reconoce una cadena.
+Prueba 3: Error al reconocer la igualdad.
+Prueba 4: Sin errores.
