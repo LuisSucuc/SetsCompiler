@@ -9,8 +9,8 @@ con5	=	{"&","$","/","^c","*"}
 con6	=	{"reloj", "camión", "pelota", "cuadro"}
 con7	=	{"moto", "carro", "avión", "barco", "tractor"}
 con8	=	{"i","ii","iii","iv","v"}
-con9	=	{"aX^2+bX+C"}
-con0	=	{"0.5","4**0.5","1E10"}
+con9	=	{"aX2bXC"}
+con0	=	{"a05","b405","F1E10"}
 conv	=	{}
 cona	=	{"ñ","Ñ"}
 		
@@ -297,4 +297,4 @@ con0/con6
 conv/con6		
 cona/con6		
 con7/con7		
-1con8/con7		
+acon8/con7		

@@ -1,0 +1,93 @@
+package Generators;
+import Principal.Token;
+import static Principal.Token.*;
+
+
+%%
+
+%class SemanticLexer
+%public
+%type Token
+%line
+%column
+
+
+DEFINICION = "DEFINICION" | "definicion"
+
+
+UNIVERSO = "UNIVERSO" | "universo"
+LLAVE_ABIERTA     = "{"
+LLAVE_CERRADA     = "}"
+COMA              = ","
+IGUAL             = "="
+COMILLA           = "\""
+COMILLAS           = "\""
+
+
+LETRA_MINUSCULA = [a-z] | "ñ" | "á" | "é" | "í" | "ó" | "ú"
+LETRA_MAYUSCULA = [A-Z] | "Ñ" | "Á" | "É" | "Í"| "Ó" | "Ú"
+NUMERO          = 0 | [1-9][0-9]*
+ELEMENTO_GLOBAL = ( ( {LETRA_MINUSCULA} | {LETRA_MAYUSCULA} )+ { NUMERO } * )+
+
+OPERACION          = "OPERACION" | "operacion"
+PARENTESIS_ABIERTO = "("
+PARENTESIS_CERRADO = ")"
+
+
+UNION         = "&"
+INTERSECCION  = "$"
+DIFERENCIA    = "/"
+PRODUCTO_CRUZ = "*"
+COMPLEMENTO   = "^c"
+
+
+
+
+WHITE       = [\t]
+SPACE       = " "*
+//NUEVA_LINEA = \r|\n|\r\n|\t|\f
+NUEVA_LINEA = \r|\n|\r\n
+
+
+ELEMENTO =            {SPACE} {COMILLA} {ELEMENTO_GLOBAL} {COMILLA} {SPACE}
+SEGUNDO_ELEMENTO =    {COMA} {ELEMENTO}
+
+
+ELEMENTOS_CONJUNTO =  {SPACE} {IGUAL} {SPACE} {LLAVE_ABIERTA} ({ELEMENTO} {SEGUNDO_ELEMENTO}*)+ {SPACE} {LLAVE_CERRADA} {SPACE}
+ELEMENTOS_VACIO =     {SPACE} {IGUAL} {SPACE} {LLAVE_ABIERTA} {SPACE} {LLAVE_CERRADA} {SPACE}
+
+CONJUNTO =            {ELEMENTO_GLOBAL} {ELEMENTOS_CONJUNTO}
+CONJUNTO_VACIO =      {ELEMENTO_GLOBAL} {ELEMENTOS_VACIO}
+CONJUNTO_UNIVERSO =   {SPACE} {UNIVERSO} {ELEMENTOS_CONJUNTO}
+
+ID_CONJUNTO  =        {SPACE} {LETRA_MAYUSCULA}+ {SPACE}
+OPERACION_SIMBOLO =   {SPACE} (  {UNION} | {INTERSECCION} | {DIFERENCIA} | {PRODUCTO_CRUZ} ) {SPACE}
+OPERACION_BASICA =    {ID_CONJUNTO}  ( {OPERACION_SIMBOLO} {ID_CONJUNTO} )*
+OPERACION_LLAVES =    {PARENTESIS_ABIERTO} {OPERACION_BASICA} {PARENTESIS_CERRADO}
+DOS_OPERACIONES =     {OPERACION_LLAVES}  ( ( ( {OPERACION_SIMBOLO} {ID_CONJUNTO} )*  {OPERACION_SIMBOLO} ) |  {OPERACION_SIMBOLO}  ){OPERACION_LLAVES}
+
+OPERACION_CONJUNTO =  { OPERACION_BASICA } | { OPERACION_LLAVES } | {DOS_OPERACIONES}
+%{
+   public String lexeme;
+   public int line_count;
+   public int column_count;
+%}
+
+%%
+
+
+//Definiciones a retornar
+
+{DEFINICION}                {line_count=yyline;column_count=yycolumn; return DEFINICION;}
+{CONJUNTO_UNIVERSO}         {line_count=yyline;column_count=yycolumn; return CONJUNTO_UNIVERSO;}
+{CONJUNTO_VACIO}            {line_count=yyline;column_count=yycolumn; return CONJUNTO_VACIO;}
+{CONJUNTO}                  {line_count=yyline;column_count=yycolumn; return CONJUNTO;}
+{OPERACION_CONJUNTO}        {line_count=yyline;column_count=yycolumn; return OPERACION_CONJUNTO;}
+
+//Definiciones por defecto
+{NUEVA_LINEA}               {line_count=yyline;column_count=yycolumn; return NUEVA_LINEA;}
+{WHITE}                     {/*Ignore*/}
+
+
+
+. {line_count=yyline;column_count=yycolumn;return ERROR;}

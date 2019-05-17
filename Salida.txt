@@ -1,301 +1,301 @@
-definicion       --->  Línea 0 correcta. 
-universo= "{ ""0" ", ""1" ", ""2" ", ""3" ", ""4" ", ""5" ", ""6" ", ""7" ", ""8" ", ""9" ", ""10" ", ""11" ", ""12" ", ""13" ", ""14" ", ""15" ", ""16" ", ""17" ", ""18" ", ""19" ", ""20" ", ""21" ", ""22" ", ""23" ", ""24" ", ""25" ", ""26" ", ""27" ", ""28" ", ""29" ", ""30" ", ""31" ", ""32" ", ""33" ", ""34" ", ""35" ", ""36" ", ""37" ", ""38" ", ""39" ", ""40" ", ""41" ", ""42" ", ""43" ", ""44" ", ""45" ", ""46" ", ""47" ", ""48" ", ""49" ", ""50" ", ""51" ", ""52" ", ""53" ", ""54" ", ""55" ", ""56" ", ""57" ", ""58" ", ""59" ", ""60" ", ""61" ", ""62" ", ""63" ", ""64" ", ""65" ", ""66" ", ""67" ", ""68" ", ""69" ", ""70" ", ""71" ", ""72" ", ""73" ", ""74" ", ""75" ", ""76" ", ""77" ", ""78" ", ""79" ", ""80" ", ""81" ", ""82" ", ""83" ", ""84" ", ""85" ", ""86" ", ""87" ", ""88" ", ""89" ", ""90" ", ""91" ", ""92" ", ""93" ", ""94" ", ""95" ", ""96" ", ""97" ", ""98" ", ""99" ", ""100" ",   ""Aarón" ", ""Abdón" ", ""Abel" ", ""Abelardo" ", ""Abrahán" ", ""Absalón" ", ""Acacio" ", ""Adalberto" ", ""Adán" ", ""Adela" ", ""Adelaida" ", ""Adolfo" ", ""Adón" ", ""Adrián" ", ""Agueda" ", ""Agustín" ", ""Alberto" ", ""Albina" ", ""Alejandro" ", ""Alejo" ", ""Alfonso" ", ""Alfredo" ", ""Alicia" ", ""Alipio" ", ""Almudena" ", ""Alvaro" ", ""Amadeo" ", ""Amaro" ", ""Ambrosio" ", " "Amelia o Amalia " ", ""Ana" ", ""Ananías" ", ""Anastasia" ", ""Anatolio" ", ""Andrés" ", ""Ángel" ", ""Anselmo" ", ""Antero" ", ""Antonio" ", ""Aquiles" ", ""Araceli" ", ""Aránzazu" ", ""Arcadio" ", ""Aresio" ", ""Ariadna" ", ""Aristides" ", ""Arnaldo" ", ""Artemio" ", ""Arturo" ", ""Atanasio" ", ""Augusto" ", ""Áurea" ", ""Aurelia" ", ""Aureliano" ", ""Aurelio" ", ""Baldomero" ", ""Balduino" ", ""Baltasar" ", ""Bárbara" ", ""Bartolomé" ", ""Basileo" ", ""Beatriz" ", ""Belén" ", ""Beltrán" ", ""Benedicto" ", ""Benigno" ", ""Benjamín" ", ""Bernabé" ", ""Bernardo" ", ""Blanca" ", ""Blas" ", ""Bonifacio" ", ""Bruno" ", ""Calixto" ", ""Camilo" ", ""Cándida" ", ""Carina" ", ""Carlos" ", ""Carmen" ", ""Casiano" ", ""Casimiro" ", ""Casio" ", ""Catalina" ", ""Cayetano" ", ""Cayo" ", ""Cecilia" ", ""Ceferino" ", ""Celia" ", ""Celso" ", ""Cesáreo" ", ""Cipriano" ", ""Cirilo" ", ""Cirino" ", ""Ciro" ", ""Claudio" ", ""Cleofás" ", ""Clotilde" ", ""Colombo" ", ""Columba" ", ""Columbano" ", ""Conrado" ", ""Constancio" ", ""Constantino" ", ""Cosme" ", ""Cristina" ", ""Cristóbal" ", ""Daciano" ", ""Dacio" ", ""Dámaso" ", ""Damián" ", ""Daniel" ", ""Dario" ", ""David" ", ""Demócrito" ", ""Diego" ", ""Dimas" ", ""Domingo" ", ""Donato" ", ""Dorotea" ", ""Edmundo" ", ""Eduardo" ", ""Eduvigis" ", ""Efrén" ", ""Elena" ", ""Elías" ", ""Elisa" ", ""Eliseo" ", ""Emiliano" ", ""Emilio" ", ""Enrique" ", ""Epifanía" ", ""Erico" ", ""Ernesto" ", ""Esdras" ", ""Esiquio" ", ""Esteban" ", ""Ester" ", ""Eugenia" ", ""Eulalia" ", ""Eusebio" ", ""Eva" ", ""Evaristo" ", ""Ezequiel" ", ""Fabián" ", ""Fabio" ", ""Fabiola" ", ""Facundo" ", ""Faustino" ", ""Fausto" ", ""Federico" ", ""Feliciano" ", ""Felipe" ", ""Félix" ", ""Fermín" ", ""Fernando" ", ""Fidel" ", ""Fortunato" ", ""Francisco" ", ""Fulgencio" ", ""Gabriel" ", ""Genoveva" ", ""Gerardo" ", ""Germán" ", ""Gertrudis" ", ""Gisela" ", ""Godofredo" ", ""Gonzalo" ", ""Gregorio" ", ""Guadalupe" ", ""Guido" ", ""Guillermo" ", ""Guzmán" ", ""Heliodoro" ", ""Heraclio" ", ""Heriberto" ", ""Hilarión" ", ""Hildegarda" ", ""Homero" ", ""Honorato" ", ""Honorio" ", ""Hugo" ", ""Humberto" ", ""Ifigenia" ", ""Ignacio" ", ""Ildefonso" ", ""Inés" ", ""Inmaculada" ", ""Inocencio" ", ""Irene" ", ""Ireneo" ", ""Isaac" ", ""Isabel" ", ""Isaias" ", ""Ismael" ", ""Ivon" ", ""Jacinto" ", ""Jacob" ", ""Jaime" ", ""Javier" ", ""Jeremías" ", ""Jerónimo" ", ""Jesús" ", ""Joaquím" ", ""Joel" ", ""Jonás" ", ""Jorge" ", ""Josafat" ", ""José" ", ""Josué" ", ""Juan" ", ""Julián" ", ""Justino" ", ""Juvenal" ", ""Ladislao" ", ""Laura" ", ""Laureano" ", ""Lázaro" ", ""Leandro" ", ""Leocadia" ", ""Leonardo" ", ""Leoncio" ", ""Leonor" ", ""Leopoldo" ", ""Lidia" ", ""Liduvina" ", ""Lino" ", ""Lorenzo" ", ""Lucano" ", ""Lucas" ", ""Lucía" ", ""Luciano" ", ""Lucrecia" ", ""Luis" ", ""Macario" ", ""Magdalena" ", ""Manuel" ", ""Marcelino" ", ""Marcelo" ", ""Marcial" ", ""Marciano" ", ""Marcos" ", ""Margarita" ", ""María" ", ""Mariano" ", ""Marina" ", ""Mario" ", ""Marta" ", ""Martín" ", ""Mateo" ", ""Matías" ", ""Matilde" ", ""Mauricio" ", ""Maximiliano" ", ""Melchor" ", ""Mercedes" ", ""Miguel" ", ""Miqueas" ", ""Moisés" ", ""Mónica" ", ""Montserrat" ", ""Narciso" ", ""Natalia" ", ""Nazario" ", ""Nemesio" ", ""Nicanor" ", ""Nicodemo" ", ""Nicolás" ", ""Nicomedes" ", ""Nieves" ", ""Noé" ", ""Norberto" ", ""Octavio" ", ""Odón" ", ""Onésimo" ", ""Orestes" ", ""Oriol" ", ""Óscar" ", ""Oseas" ", ""Oswaldo" ", ""Otilia" ", ""Oto" ", ""Pablo" ", ""Pancracio" ", ""Patricio" ", ""Paula" ", ""Pedro" ", ""Petronila" ", ""Pío" ", ""Poncio" ", ""Porfirio" ", ""Primo" ", ""Priscila" ", ""Probo" ", ""Rafael" ", ""Raimundo" ", ""Ramiro" ", ""Ramón" ", ""Raúl" ", ""Rebeca" ", ""Reinaldo" ", ""Renato" ", ""Ricardo" ", ""Rigoberto" ", ""Rita" ", ""Roberto" ", ""Rodrigo" ", ""Rogelio" ", ""Román" ", ""Romualdo" ", ""Roque" ", ""Rosalia" ", ""Rosario" ", ""Rosendo" ", ""Rufo" ", ""Ruperto" ", ""Salomé" ", ""Salomón" ", ""Salvador" ", ""Salvio" ", ""Samuel" ", ""Sansón" ", ""Santiago" ", ""Sara" ", ""Sebastián" ", ""Segismundo" ", ""Sergio" ", ""Severino" ", ""Simeón" ", ""Simón" ", ""Siro" ", ""Sixto" ", ""Sofía" ", ""Susana" ", ""Tadeo" ", ""Tarsicio" ", ""Teodora" ", ""Teodosia" ", ""Teófanes" ", ""Teófila" ", ""Teresa" ", ""Timoteo" ", ""Tito" ", ""Tobías" ", ""Tomás" ", ""Toribio" ", ""Ubaldo" ", ""Urbano" ", ""Ursula" ", ""Valentín" ", ""Valeriano" ", ""Velerio" ", ""Venancio" ", ""Verónica" ", ""Vicente" ", ""Víctor" ", ""Victorino" ", ""Victorio" ", ""Vidal" ", ""Virgilio" ", ""Vladimiro" ", ""Wilfredo" ", ""Zacarías" ", ""Zaqueo" ",      " "& " ",  " "$ " ",  " "/ " ",  " "^c " ",  " "* " "}       ---> No reconocido '"' en línea 1 columna 11. 
-"hola" con1= "{ ""0" ", ""1" ", ""2" ", ""3" "} "       ---> No reconocido '"' en línea 2 columna 14. 
-con2= "{ ""Enrique" ", ""Epifanía" ", ""Erico" ", ""Ernesto" "} "       ---> No reconocido '"' en línea 3 columna 7. 
-con3={"Rojo", "Azul", "Verde", "Amarillo"}       --->  Línea 4 correcta. 
-con3={"00","11", "22", "33", "44", "55","66","77", "88","99"}       --->  Línea 5 correcta. 
-con4={"10","20","30","40","50","60","80","90", "100"}       --->  Línea 6 correcta. 
-con5={ "& ", "$ ", "/ ", "^c ", "* "}       ---> No reconocido '"' en línea 7 columna 8. 
-con6={"reloj", "camión", "pelota", "cuadro"}       --->  Línea 8 correcta. 
-con7={"moto", "carro", "avión", "barco", "tractor"}       --->  Línea 9 correcta. 
-con8={"i","ii","iii","iv","v"}       --->  Línea 10 correcta. 
-con9={ "aX ^ 2 +bX +C "}       ---> No reconocido '"' en línea 11 columna 8. 
-con0={ " 0 . 5 ", " 4** 0 . 5 ","1E10"}       ---> No reconocido '"' en línea 12 columna 8. 
-conv={}       --->  Línea 13 correcta. 
-cona={"ñ","Ñ"}       --->  Línea 14 correcta. 
+definicion       ---> Aceptado 
+universo="{""0"",""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8"",""9"",""10"",""11"",""12"",""13"",""14"",""15"",""16"",""17"",""18"",""19"",""20"",""21"",""22"",""23"",""24"",""25"",""26"",""27"",""28"",""29"",""30"",""31"",""32"",""33"",""34"",""35"",""36"",""37"",""38"",""39"",""40"",""41"",""42"",""43"",""44"",""45"",""46"",""47"",""48"",""49"",""50"",""51"",""52"",""53"",""54"",""55"",""56"",""57"",""58"",""59"",""60"",""61"",""62"",""63"",""64"",""65"",""66"",""67"",""68"",""69"",""70"",""71"",""72"",""73"",""74"",""75"",""76"",""77"",""78"",""79"",""80"",""81"",""82"",""83"",""84"",""85"",""86"",""87"",""88"",""89"",""90"",""91"",""92"",""93"",""94"",""95"",""96"",""97"",""98"",""99"",""100"",  ""Aarón"",""Abdón"",""Abel"",""Abelardo"",""Abrahán"",""Absalón"",""Acacio"",""Adalberto"",""Adán"",""Adela"",""Adelaida"",""Adolfo"",""Adón"",""Adrián"",""Agueda"",""Agustín"",""Alberto"",""Albina"",""Alejandro"",""Alejo"",""Alfonso"",""Alfredo"",""Alicia"",""Alipio"",""Almudena"",""Alvaro"",""Amadeo"",""Amaro"",""Ambrosio"",""Amelia o Amalia"",""Ana"",""Ananías"",""Anastasia"",""Anatolio"",""Andrés"",""Ángel"",""Anselmo"",""Antero"",""Antonio"",""Aquiles"",""Araceli"",""Aránzazu"",""Arcadio"",""Aresio"",""Ariadna"",""Aristides"",""Arnaldo"",""Artemio"",""Arturo"",""Atanasio"",""Augusto"",""Áurea"",""Aurelia"",""Aureliano"",""Aurelio"",""Baldomero"",""Balduino"",""Baltasar"",""Bárbara"",""Bartolomé"",""Basileo"",""Beatriz"",""Belén"",""Beltrán"",""Benedicto"",""Benigno"",""Benjamín"",""Bernabé"",""Bernardo"",""Blanca"",""Blas"",""Bonifacio"",""Bruno"",""Calixto"",""Camilo"",""Cándida"",""Carina"",""Carlos"",""Carmen"",""Casiano"",""Casimiro"",""Casio"",""Catalina"",""Cayetano"",""Cayo"",""Cecilia"",""Ceferino"",""Celia"",""Celso"",""Cesáreo"",""Cipriano"",""Cirilo"",""Cirino"",""Ciro"",""Claudio"",""Cleofás"",""Clotilde"",""Colombo"",""Columba"",""Columbano"",""Conrado"",""Constancio"",""Constantino"",""Cosme"",""Cristina"",""Cristóbal"",""Daciano"",""Dacio"",""Dámaso"",""Damián"",""Daniel"",""Dario"",""David"",""Demócrito"",""Diego"",""Dimas"",""Domingo"",""Donato"",""Dorotea"",""Edmundo"",""Eduardo"",""Eduvigis"",""Efrén"",""Elena"",""Elías"",""Elisa"",""Eliseo"",""Emiliano"",""Emilio"",""Enrique"",""Epifanía"",""Erico"",""Ernesto"",""Esdras"",""Esiquio"",""Esteban"",""Ester"",""Eugenia"",""Eulalia"",""Eusebio"",""Eva"",""Evaristo"",""Ezequiel"",""Fabián"",""Fabio"",""Fabiola"",""Facundo"",""Faustino"",""Fausto"",""Federico"",""Feliciano"",""Felipe"",""Félix"",""Fermín"",""Fernando"",""Fidel"",""Fortunato"",""Francisco"",""Fulgencio"",""Gabriel"",""Genoveva"",""Gerardo"",""Germán"",""Gertrudis"",""Gisela"",""Godofredo"",""Gonzalo"",""Gregorio"",""Guadalupe"",""Guido"",""Guillermo"",""Guzmán"",""Heliodoro"",""Heraclio"",""Heriberto"",""Hilarión"",""Hildegarda"",""Homero"",""Honorato"",""Honorio"",""Hugo"",""Humberto"",""Ifigenia"",""Ignacio"",""Ildefonso"",""Inés"",""Inmaculada"",""Inocencio"",""Irene"",""Ireneo"",""Isaac"",""Isabel"",""Isaias"",""Ismael"",""Ivon"",""Jacinto"",""Jacob"",""Jaime"",""Javier"",""Jeremías"",""Jerónimo"",""Jesús"",""Joaquím"",""Joel"",""Jonás"",""Jorge"",""Josafat"",""José"",""Josué"",""Juan"",""Julián"",""Justino"",""Juvenal"",""Ladislao"",""Laura"",""Laureano"",""Lázaro"",""Leandro"",""Leocadia"",""Leonardo"",""Leoncio"",""Leonor"",""Leopoldo"",""Lidia"",""Liduvina"",""Lino"",""Lorenzo"",""Lucano"",""Lucas"",""Lucía"",""Luciano"",""Lucrecia"",""Luis"",""Macario"",""Magdalena"",""Manuel"",""Marcelino"",""Marcelo"",""Marcial"",""Marciano"",""Marcos"",""Margarita"",""María"",""Mariano"",""Marina"",""Mario"",""Marta"",""Martín"",""Mateo"",""Matías"",""Matilde"",""Mauricio"",""Maximiliano"",""Melchor"",""Mercedes"",""Miguel"",""Miqueas"",""Moisés"",""Mónica"",""Montserrat"",""Narciso"",""Natalia"",""Nazario"",""Nemesio"",""Nicanor"",""Nicodemo"",""Nicolás"",""Nicomedes"",""Nieves"",""Noé"",""Norberto"",""Octavio"",""Odón"",""Onésimo"",""Orestes"",""Oriol"",""Óscar"",""Oseas"",""Oswaldo"",""Otilia"",""Oto"",""Pablo"",""Pancracio"",""Patricio"",""Paula"",""Pedro"",""Petronila"",""Pío"",""Poncio"",""Porfirio"",""Primo"",""Priscila"",""Probo"",""Rafael"",""Raimundo"",""Ramiro"",""Ramón"",""Raúl"",""Rebeca"",""Reinaldo"",""Renato"",""Ricardo"",""Rigoberto"",""Rita"",""Roberto"",""Rodrigo"",""Rogelio"",""Román"",""Romualdo"",""Roque"",""Rosalia"",""Rosario"",""Rosendo"",""Rufo"",""Ruperto"",""Salomé"",""Salomón"",""Salvador"",""Salvio"",""Samuel"",""Sansón"",""Santiago"",""Sara"",""Sebastián"",""Segismundo"",""Sergio"",""Severino"",""Simeón"",""Simón"",""Siro"",""Sixto"",""Sofía"",""Susana"",""Tadeo"",""Tarsicio"",""Teodora"",""Teodosia"",""Teófanes"",""Teófila"",""Teresa"",""Timoteo"",""Tito"",""Tobías"",""Tomás"",""Toribio"",""Ubaldo"",""Urbano"",""Ursula"",""Valentín"",""Valeriano"",""Velerio"",""Venancio"",""Verónica"",""Vicente"",""Víctor"",""Victorino"",""Victorio"",""Vidal"",""Virgilio"",""Vladimiro"",""Wilfredo"",""Zacarías"",""Zaqueo"",     ""&"", ""$"", ""/"", ""^c"", ""*""}       ---> Aceptado 
+"hola" con1="{""0"",""1"",""2"",""3""}"       ---> Aceptado 
+con2="{""Enrique"",""Epifanía"",""Erico"",""Ernesto""}"       ---> Aceptado 
+con3={"Rojo", "Azul", "Verde", "Amarillo"}       ---> Aceptado 
+con3={"00","11", "22", "33", "44", "55","66","77", "88","99"}       ---> Aceptado 
+con4={"10","20","30","40","50","60","80","90", "100"}       ---> Aceptado 
+con5={"&","$","/","^c","*"}       ---> Aceptado 
+con6={"reloj", "camión", "pelota", "cuadro"}       ---> Aceptado 
+con7={"moto", "carro", "avión", "barco", "tractor"}       ---> Aceptado 
+con8={"i","ii","iii","iv","v"}       ---> Aceptado 
+con9={"aX2bXC"}       ---> Aceptado 
+con0={"a05","b405","F1E10"}       ---> Aceptado 
+conv={}       ---> Aceptado 
+cona={"ñ","Ñ"}       ---> Aceptado 
 
-operaciones       --->  Línea 16 correcta. 
-con1^c       --->  Línea 17 correcta. 
-con2^c       --->  Línea 18 correcta. 
-con3^c       --->  Línea 19 correcta. 
-con4^c       --->  Línea 20 correcta. 
-con5^c       --->  Línea 21 correcta. 
-con6^c       --->  Línea 22 correcta. 
-con7^c       --->  Línea 23 correcta. 
-con8^c       --->  Línea 24 correcta. 
-con9^c       --->  Línea 25 correcta. 
-con0^c       --->  Línea 26 correcta. 
-conv^c       --->  Línea 27 correcta. 
-cona^c       --->  Línea 28 correcta. 
-con1*con1       --->  Línea 29 correcta. 
-con2*con1       --->  Línea 30 correcta. 
-con3*con1       --->  Línea 31 correcta. 
-con4*con1       --->  Línea 32 correcta. 
-con5*con1       --->  Línea 33 correcta. 
-con6*con1       --->  Línea 34 correcta. 
-con7*con1       --->  Línea 35 correcta. 
-con8*con1       --->  Línea 36 correcta. 
-con9*con1       --->  Línea 37 correcta. 
-con0*con1       --->  Línea 38 correcta. 
-conv*con1       --->  Línea 39 correcta. 
-cona*con1       --->  Línea 40 correcta. 
-con2*con2       --->  Línea 41 correcta. 
-con3*con2       --->  Línea 42 correcta. 
-con4*con2       --->  Línea 43 correcta. 
-con5*con2       --->  Línea 44 correcta. 
-con6*con2       --->  Línea 45 correcta. 
-con7*con2       --->  Línea 46 correcta. 
-con8*con2       --->  Línea 47 correcta. 
-con9*con2       --->  Línea 48 correcta. 
-con0*con2       --->  Línea 49 correcta. 
-conv*con2       --->  Línea 50 correcta. 
-cona*con2       --->  Línea 51 correcta. 
-con3*con3       --->  Línea 52 correcta. 
-con4*con3       --->  Línea 53 correcta. 
-con5*con3       --->  Línea 54 correcta. 
-con6*con3       --->  Línea 55 correcta. 
-con7*con3       --->  Línea 56 correcta. 
-con8*con3       --->  Línea 57 correcta. 
-con9*con3       --->  Línea 58 correcta. 
-con0*con3       --->  Línea 59 correcta. 
-conv*con3       --->  Línea 60 correcta. 
-cona*con3       --->  Línea 61 correcta. 
-con4*con4       --->  Línea 62 correcta. 
-con5*con4       --->  Línea 63 correcta. 
-con6*con4       --->  Línea 64 correcta. 
-con7*con4       --->  Línea 65 correcta. 
-con8*con4       --->  Línea 66 correcta. 
-con9*con4       --->  Línea 67 correcta. 
-con0*con4       --->  Línea 68 correcta. 
-conv*con4       --->  Línea 69 correcta. 
-cona*con4       --->  Línea 70 correcta. 
-con5*con5       --->  Línea 71 correcta. 
-con6*con5       --->  Línea 72 correcta. 
-con7*con5       --->  Línea 73 correcta. 
-con8*con5       --->  Línea 74 correcta. 
-con9*con5       --->  Línea 75 correcta. 
-con0*con5       --->  Línea 76 correcta. 
-conv*con5       --->  Línea 77 correcta. 
-cona*con5       --->  Línea 78 correcta. 
-con6*con6       --->  Línea 79 correcta. 
-con7*con6       --->  Línea 80 correcta. 
-con8*con6       --->  Línea 81 correcta. 
-con9*con6       --->  Línea 82 correcta. 
-con0*con6       --->  Línea 83 correcta. 
-conv*con6       --->  Línea 84 correcta. 
-cona*con6       --->  Línea 85 correcta. 
-con7*con7       --->  Línea 86 correcta. 
-con8*con7       --->  Línea 87 correcta. 
-con9*con7       --->  Línea 88 correcta. 
-con0*con7       --->  Línea 89 correcta. 
-conv*con7       --->  Línea 90 correcta. 
-cona*con7       --->  Línea 91 correcta. 
-con8*con8       --->  Línea 92 correcta. 
-con9*con8       --->  Línea 93 correcta. 
-con0*con8       --->  Línea 94 correcta. 
-conv*con8       --->  Línea 95 correcta. 
-cona*con8       --->  Línea 96 correcta. 
-con9*con9       --->  Línea 97 correcta. 
-con0*con9       --->  Línea 98 correcta. 
-conv*con9       --->  Línea 99 correcta. 
-cona*con9       --->  Línea 100 correcta. 
-conv*conv       --->  Línea 101 correcta. 
-cona*conv       --->  Línea 102 correcta. 
-cona*cona       --->  Línea 103 correcta. 
-con1$con1       --->  Línea 104 correcta. 
-con2$con1       --->  Línea 105 correcta. 
-con3$con1       --->  Línea 106 correcta. 
-con4$con1       --->  Línea 107 correcta. 
-con5$con1       --->  Línea 108 correcta. 
-con6$con1       --->  Línea 109 correcta. 
-con7$con1       --->  Línea 110 correcta. 
-con8$con1       --->  Línea 111 correcta. 
-con9$con1       --->  Línea 112 correcta. 
-con0$con1       --->  Línea 113 correcta. 
-conv$con1       --->  Línea 114 correcta. 
-cona$con1       --->  Línea 115 correcta. 
-con2$con2       --->  Línea 116 correcta. 
-con3$con2       --->  Línea 117 correcta. 
-con4$con2       --->  Línea 118 correcta. 
-con5$con2       --->  Línea 119 correcta. 
-con6$con2       --->  Línea 120 correcta. 
-con7$con2       --->  Línea 121 correcta. 
-con8$con2       --->  Línea 122 correcta. 
-con9$con2       --->  Línea 123 correcta. 
-con0$con2       --->  Línea 124 correcta. 
-conv$con2       --->  Línea 125 correcta. 
-cona$con2       --->  Línea 126 correcta. 
-con3$con3       --->  Línea 127 correcta. 
-con4$con3       --->  Línea 128 correcta. 
-con5$con3       --->  Línea 129 correcta. 
-con6$con3       --->  Línea 130 correcta. 
-con7$con3       --->  Línea 131 correcta. 
-con8$con3       --->  Línea 132 correcta. 
-con9$con3       --->  Línea 133 correcta. 
-con0$con3       --->  Línea 134 correcta. 
-conv$con3       --->  Línea 135 correcta. 
-cona$con3       --->  Línea 136 correcta. 
-con4$con4       --->  Línea 137 correcta. 
-con5$con4       --->  Línea 138 correcta. 
-con6$con4       --->  Línea 139 correcta. 
-con7$con4       --->  Línea 140 correcta. 
-con8$con4       --->  Línea 141 correcta. 
-con9$con4       --->  Línea 142 correcta. 
-con0$con4       --->  Línea 143 correcta. 
-conv$con4       --->  Línea 144 correcta. 
-cona$con4       --->  Línea 145 correcta. 
-con5$con5       --->  Línea 146 correcta. 
-con6$con5       --->  Línea 147 correcta. 
-con7$con5       --->  Línea 148 correcta. 
-con8$con5       --->  Línea 149 correcta. 
-con9$con5       --->  Línea 150 correcta. 
-con0$con5       --->  Línea 151 correcta. 
-conv$con5       --->  Línea 152 correcta. 
-cona$con5       --->  Línea 153 correcta. 
-con6$con6       --->  Línea 154 correcta. 
-con7$con6       --->  Línea 155 correcta. 
-con8$con6       --->  Línea 156 correcta. 
-con9$con6       --->  Línea 157 correcta. 
-con0$con6       --->  Línea 158 correcta. 
-conv$con6       --->  Línea 159 correcta. 
-cona$con6       --->  Línea 160 correcta. 
-con7$con7       --->  Línea 161 correcta. 
-con8$con7       --->  Línea 162 correcta. 
-con9$con7       --->  Línea 163 correcta. 
-con0$con7       --->  Línea 164 correcta. 
-conv$con7       --->  Línea 165 correcta. 
-cona$con7       --->  Línea 166 correcta. 
-con8$con8       --->  Línea 167 correcta. 
-con9$con8       --->  Línea 168 correcta. 
-con0$con8       --->  Línea 169 correcta. 
-conv$con8       --->  Línea 170 correcta. 
-cona$con8       --->  Línea 171 correcta. 
-con9$con9       --->  Línea 172 correcta. 
-con0$con9       --->  Línea 173 correcta. 
-conv$con9       --->  Línea 174 correcta. 
-cona$con9       --->  Línea 175 correcta. 
-con0$con0       --->  Línea 176 correcta. 
-conv$con0       --->  Línea 177 correcta. 
-cona$con0       --->  Línea 178 correcta. 
-conv$conv       --->  Línea 179 correcta. 
-cona$conv       --->  Línea 180 correcta. 
-cona$cona       --->  Línea 181 correcta. 
-con1&con1       --->  Línea 182 correcta. 
-con2&con1       --->  Línea 183 correcta. 
-con3&con1       --->  Línea 184 correcta. 
-con4&con1       --->  Línea 185 correcta. 
-con5&con1       --->  Línea 186 correcta. 
-con6&con1       --->  Línea 187 correcta. 
-con7&con1       --->  Línea 188 correcta. 
-con8&con1       --->  Línea 189 correcta. 
-con9&con1       --->  Línea 190 correcta. 
-con0&con1       --->  Línea 191 correcta. 
-conv&con1       --->  Línea 192 correcta. 
-cona&con1       --->  Línea 193 correcta. 
-con2&con2       --->  Línea 194 correcta. 
-con3&con2       --->  Línea 195 correcta. 
-con4&con2       --->  Línea 196 correcta. 
-con5&con2       --->  Línea 197 correcta. 
-con6&con2       --->  Línea 198 correcta. 
-con7&con2       --->  Línea 199 correcta. 
-con8&con2       --->  Línea 200 correcta. 
-con9&con2       --->  Línea 201 correcta. 
-con0&con2       --->  Línea 202 correcta. 
-conv&con2       --->  Línea 203 correcta. 
-cona&con2       --->  Línea 204 correcta. 
-con3&con3       --->  Línea 205 correcta. 
-con4&con3       --->  Línea 206 correcta. 
-con5&con3       --->  Línea 207 correcta. 
-con6&con3       --->  Línea 208 correcta. 
-con7&con3       --->  Línea 209 correcta. 
-con8&con3       --->  Línea 210 correcta. 
-con9&con3       --->  Línea 211 correcta. 
-con0&con3       --->  Línea 212 correcta. 
-conv&con3       --->  Línea 213 correcta. 
-cona&con3       --->  Línea 214 correcta. 
-con4&con4       --->  Línea 215 correcta. 
-con5&con4       --->  Línea 216 correcta. 
-con6&con4       --->  Línea 217 correcta. 
-con7&con4       --->  Línea 218 correcta. 
-con8&con4       --->  Línea 219 correcta. 
-con9&con4       --->  Línea 220 correcta. 
-con0&con4       --->  Línea 221 correcta. 
-conv&con4       --->  Línea 222 correcta. 
-cona&con4       --->  Línea 223 correcta. 
-con5&con5       --->  Línea 224 correcta. 
-con6&con5       --->  Línea 225 correcta. 
-con7&con5       --->  Línea 226 correcta. 
-con8&con5       --->  Línea 227 correcta. 
-con9&con5       --->  Línea 228 correcta. 
-con0&con5       --->  Línea 229 correcta. 
-conv&con5       --->  Línea 230 correcta. 
-cona&con5       --->  Línea 231 correcta. 
-con6&con6       --->  Línea 232 correcta. 
-con7&con6       --->  Línea 233 correcta. 
-con8&con6       --->  Línea 234 correcta. 
-con9&con6       --->  Línea 235 correcta. 
-con0&con6       --->  Línea 236 correcta. 
-conv&con6       --->  Línea 237 correcta. 
-cona&con6       --->  Línea 238 correcta. 
-con7&con7       --->  Línea 239 correcta. 
-con8&con7       --->  Línea 240 correcta. 
-con1/con1       --->  Línea 241 correcta. 
-con2/con1       --->  Línea 242 correcta. 
-con3/con1       --->  Línea 243 correcta. 
-con4/con1       --->  Línea 244 correcta. 
-con5/con1       --->  Línea 245 correcta. 
-con6/con1       --->  Línea 246 correcta. 
-con7/con1       --->  Línea 247 correcta. 
-con8/con1       --->  Línea 248 correcta. 
-con9/con1       --->  Línea 249 correcta. 
-con0/con1       --->  Línea 250 correcta. 
-conv/con1       --->  Línea 251 correcta. 
-cona/con1       --->  Línea 252 correcta. 
-con2/con2       --->  Línea 253 correcta. 
-con3/con2       --->  Línea 254 correcta. 
-con4/con2       --->  Línea 255 correcta. 
-con5/con2       --->  Línea 256 correcta. 
-con6/con2       --->  Línea 257 correcta. 
-con7/con2       --->  Línea 258 correcta. 
-con8/con2       --->  Línea 259 correcta. 
-con9/con2       --->  Línea 260 correcta. 
-con0/con2       --->  Línea 261 correcta. 
-conv/con2       --->  Línea 262 correcta. 
-cona/con2       --->  Línea 263 correcta. 
-con3/con3       --->  Línea 264 correcta. 
-con4/con3       --->  Línea 265 correcta. 
-con5/con3       --->  Línea 266 correcta. 
-con6/con3       --->  Línea 267 correcta. 
-con7/con3       --->  Línea 268 correcta. 
-con8/con3       --->  Línea 269 correcta. 
-con9/con3       --->  Línea 270 correcta. 
-con0/con3       --->  Línea 271 correcta. 
-conv/con3       --->  Línea 272 correcta. 
-cona/con3       --->  Línea 273 correcta. 
-con4/con4       --->  Línea 274 correcta. 
-con5/con4       --->  Línea 275 correcta. 
-con6/con4       --->  Línea 276 correcta. 
-con7/con4       --->  Línea 277 correcta. 
-con8/con4       --->  Línea 278 correcta. 
-con9/con4       --->  Línea 279 correcta. 
-con0/con4       --->  Línea 280 correcta. 
-conv/con4       --->  Línea 281 correcta. 
-cona/con4       --->  Línea 282 correcta. 
-con5/con5       --->  Línea 283 correcta. 
-con6/con5       --->  Línea 284 correcta. 
-con7/con5       --->  Línea 285 correcta. 
-con8/con5       --->  Línea 286 correcta. 
-con9/con5       --->  Línea 287 correcta. 
-con0/con5       --->  Línea 288 correcta. 
-conv/con5       --->  Línea 289 correcta. 
-cona/con5       --->  Línea 290 correcta. 
-con6/con6       --->  Línea 291 correcta. 
-con7/con6       --->  Línea 292 correcta. 
-con8/con6       --->  Línea 293 correcta. 
-con9/con6       --->  Línea 294 correcta. 
-con0/con6       --->  Línea 295 correcta. 
-conv/con6       --->  Línea 296 correcta. 
-cona/con6       --->  Línea 297 correcta. 
-con7/con7       --->  Línea 298 correcta. 
- 1con8/con7       ---> No reconocido '1' en línea 299 columna 0. 
+operaciones       ---> Aceptado 
+con1^c       ---> Aceptado 
+con2^c       ---> Aceptado 
+con3^c       ---> Aceptado 
+con4^c       ---> Aceptado 
+con5^c       ---> Aceptado 
+con6^c       ---> Aceptado 
+con7^c       ---> Aceptado 
+con8^c       ---> Aceptado 
+con9^c       ---> Aceptado 
+con0^c       ---> Aceptado 
+conv^c       ---> Aceptado 
+cona^c       ---> Aceptado 
+con1*con1       ---> Aceptado 
+con2*con1       ---> Aceptado 
+con3*con1       ---> Aceptado 
+con4*con1       ---> Aceptado 
+con5*con1       ---> Aceptado 
+con6*con1       ---> Aceptado 
+con7*con1       ---> Aceptado 
+con8*con1       ---> Aceptado 
+con9*con1       ---> Aceptado 
+con0*con1       ---> Aceptado 
+conv*con1       ---> Aceptado 
+cona*con1       ---> Aceptado 
+con2*con2       ---> Aceptado 
+con3*con2       ---> Aceptado 
+con4*con2       ---> Aceptado 
+con5*con2       ---> Aceptado 
+con6*con2       ---> Aceptado 
+con7*con2       ---> Aceptado 
+con8*con2       ---> Aceptado 
+con9*con2       ---> Aceptado 
+con0*con2       ---> Aceptado 
+conv*con2       ---> Aceptado 
+cona*con2       ---> Aceptado 
+con3*con3       ---> Aceptado 
+con4*con3       ---> Aceptado 
+con5*con3       ---> Aceptado 
+con6*con3       ---> Aceptado 
+con7*con3       ---> Aceptado 
+con8*con3       ---> Aceptado 
+con9*con3       ---> Aceptado 
+con0*con3       ---> Aceptado 
+conv*con3       ---> Aceptado 
+cona*con3       ---> Aceptado 
+con4*con4       ---> Aceptado 
+con5*con4       ---> Aceptado 
+con6*con4       ---> Aceptado 
+con7*con4       ---> Aceptado 
+con8*con4       ---> Aceptado 
+con9*con4       ---> Aceptado 
+con0*con4       ---> Aceptado 
+conv*con4       ---> Aceptado 
+cona*con4       ---> Aceptado 
+con5*con5       ---> Aceptado 
+con6*con5       ---> Aceptado 
+con7*con5       ---> Aceptado 
+con8*con5       ---> Aceptado 
+con9*con5       ---> Aceptado 
+con0*con5       ---> Aceptado 
+conv*con5       ---> Aceptado 
+cona*con5       ---> Aceptado 
+con6*con6       ---> Aceptado 
+con7*con6       ---> Aceptado 
+con8*con6       ---> Aceptado 
+con9*con6       ---> Aceptado 
+con0*con6       ---> Aceptado 
+conv*con6       ---> Aceptado 
+cona*con6       ---> Aceptado 
+con7*con7       ---> Aceptado 
+con8*con7       ---> Aceptado 
+con9*con7       ---> Aceptado 
+con0*con7       ---> Aceptado 
+conv*con7       ---> Aceptado 
+cona*con7       ---> Aceptado 
+con8*con8       ---> Aceptado 
+con9*con8       ---> Aceptado 
+con0*con8       ---> Aceptado 
+conv*con8       ---> Aceptado 
+cona*con8       ---> Aceptado 
+con9*con9       ---> Aceptado 
+con0*con9       ---> Aceptado 
+conv*con9       ---> Aceptado 
+cona*con9       ---> Aceptado 
+conv*conv       ---> Aceptado 
+cona*conv       ---> Aceptado 
+cona*cona       ---> Aceptado 
+con1$con1       ---> Aceptado 
+con2$con1       ---> Aceptado 
+con3$con1       ---> Aceptado 
+con4$con1       ---> Aceptado 
+con5$con1       ---> Aceptado 
+con6$con1       ---> Aceptado 
+con7$con1       ---> Aceptado 
+con8$con1       ---> Aceptado 
+con9$con1       ---> Aceptado 
+con0$con1       ---> Aceptado 
+conv$con1       ---> Aceptado 
+cona$con1       ---> Aceptado 
+con2$con2       ---> Aceptado 
+con3$con2       ---> Aceptado 
+con4$con2       ---> Aceptado 
+con5$con2       ---> Aceptado 
+con6$con2       ---> Aceptado 
+con7$con2       ---> Aceptado 
+con8$con2       ---> Aceptado 
+con9$con2       ---> Aceptado 
+con0$con2       ---> Aceptado 
+conv$con2       ---> Aceptado 
+cona$con2       ---> Aceptado 
+con3$con3       ---> Aceptado 
+con4$con3       ---> Aceptado 
+con5$con3       ---> Aceptado 
+con6$con3       ---> Aceptado 
+con7$con3       ---> Aceptado 
+con8$con3       ---> Aceptado 
+con9$con3       ---> Aceptado 
+con0$con3       ---> Aceptado 
+conv$con3       ---> Aceptado 
+cona$con3       ---> Aceptado 
+con4$con4       ---> Aceptado 
+con5$con4       ---> Aceptado 
+con6$con4       ---> Aceptado 
+con7$con4       ---> Aceptado 
+con8$con4       ---> Aceptado 
+con9$con4       ---> Aceptado 
+con0$con4       ---> Aceptado 
+conv$con4       ---> Aceptado 
+cona$con4       ---> Aceptado 
+con5$con5       ---> Aceptado 
+con6$con5       ---> Aceptado 
+con7$con5       ---> Aceptado 
+con8$con5       ---> Aceptado 
+con9$con5       ---> Aceptado 
+con0$con5       ---> Aceptado 
+conv$con5       ---> Aceptado 
+cona$con5       ---> Aceptado 
+con6$con6       ---> Aceptado 
+con7$con6       ---> Aceptado 
+con8$con6       ---> Aceptado 
+con9$con6       ---> Aceptado 
+con0$con6       ---> Aceptado 
+conv$con6       ---> Aceptado 
+cona$con6       ---> Aceptado 
+con7$con7       ---> Aceptado 
+con8$con7       ---> Aceptado 
+con9$con7       ---> Aceptado 
+con0$con7       ---> Aceptado 
+conv$con7       ---> Aceptado 
+cona$con7       ---> Aceptado 
+con8$con8       ---> Aceptado 
+con9$con8       ---> Aceptado 
+con0$con8       ---> Aceptado 
+conv$con8       ---> Aceptado 
+cona$con8       ---> Aceptado 
+con9$con9       ---> Aceptado 
+con0$con9       ---> Aceptado 
+conv$con9       ---> Aceptado 
+cona$con9       ---> Aceptado 
+con0$con0       ---> Aceptado 
+conv$con0       ---> Aceptado 
+cona$con0       ---> Aceptado 
+conv$conv       ---> Aceptado 
+cona$conv       ---> Aceptado 
+cona$cona       ---> Aceptado 
+con1&con1       ---> Aceptado 
+con2&con1       ---> Aceptado 
+con3&con1       ---> Aceptado 
+con4&con1       ---> Aceptado 
+con5&con1       ---> Aceptado 
+con6&con1       ---> Aceptado 
+con7&con1       ---> Aceptado 
+con8&con1       ---> Aceptado 
+con9&con1       ---> Aceptado 
+con0&con1       ---> Aceptado 
+conv&con1       ---> Aceptado 
+cona&con1       ---> Aceptado 
+con2&con2       ---> Aceptado 
+con3&con2       ---> Aceptado 
+con4&con2       ---> Aceptado 
+con5&con2       ---> Aceptado 
+con6&con2       ---> Aceptado 
+con7&con2       ---> Aceptado 
+con8&con2       ---> Aceptado 
+con9&con2       ---> Aceptado 
+con0&con2       ---> Aceptado 
+conv&con2       ---> Aceptado 
+cona&con2       ---> Aceptado 
+con3&con3       ---> Aceptado 
+con4&con3       ---> Aceptado 
+con5&con3       ---> Aceptado 
+con6&con3       ---> Aceptado 
+con7&con3       ---> Aceptado 
+con8&con3       ---> Aceptado 
+con9&con3       ---> Aceptado 
+con0&con3       ---> Aceptado 
+conv&con3       ---> Aceptado 
+cona&con3       ---> Aceptado 
+con4&con4       ---> Aceptado 
+con5&con4       ---> Aceptado 
+con6&con4       ---> Aceptado 
+con7&con4       ---> Aceptado 
+con8&con4       ---> Aceptado 
+con9&con4       ---> Aceptado 
+con0&con4       ---> Aceptado 
+conv&con4       ---> Aceptado 
+cona&con4       ---> Aceptado 
+con5&con5       ---> Aceptado 
+con6&con5       ---> Aceptado 
+con7&con5       ---> Aceptado 
+con8&con5       ---> Aceptado 
+con9&con5       ---> Aceptado 
+con0&con5       ---> Aceptado 
+conv&con5       ---> Aceptado 
+cona&con5       ---> Aceptado 
+con6&con6       ---> Aceptado 
+con7&con6       ---> Aceptado 
+con8&con6       ---> Aceptado 
+con9&con6       ---> Aceptado 
+con0&con6       ---> Aceptado 
+conv&con6       ---> Aceptado 
+cona&con6       ---> Aceptado 
+con7&con7       ---> Aceptado 
+con8&con7       ---> Aceptado 
+con1/con1       ---> Aceptado 
+con2/con1       ---> Aceptado 
+con3/con1       ---> Aceptado 
+con4/con1       ---> Aceptado 
+con5/con1       ---> Aceptado 
+con6/con1       ---> Aceptado 
+con7/con1       ---> Aceptado 
+con8/con1       ---> Aceptado 
+con9/con1       ---> Aceptado 
+con0/con1       ---> Aceptado 
+conv/con1       ---> Aceptado 
+cona/con1       ---> Aceptado 
+con2/con2       ---> Aceptado 
+con3/con2       ---> Aceptado 
+con4/con2       ---> Aceptado 
+con5/con2       ---> Aceptado 
+con6/con2       ---> Aceptado 
+con7/con2       ---> Aceptado 
+con8/con2       ---> Aceptado 
+con9/con2       ---> Aceptado 
+con0/con2       ---> Aceptado 
+conv/con2       ---> Aceptado 
+cona/con2       ---> Aceptado 
+con3/con3       ---> Aceptado 
+con4/con3       ---> Aceptado 
+con5/con3       ---> Aceptado 
+con6/con3       ---> Aceptado 
+con7/con3       ---> Aceptado 
+con8/con3       ---> Aceptado 
+con9/con3       ---> Aceptado 
+con0/con3       ---> Aceptado 
+conv/con3       ---> Aceptado 
+cona/con3       ---> Aceptado 
+con4/con4       ---> Aceptado 
+con5/con4       ---> Aceptado 
+con6/con4       ---> Aceptado 
+con7/con4       ---> Aceptado 
+con8/con4       ---> Aceptado 
+con9/con4       ---> Aceptado 
+con0/con4       ---> Aceptado 
+conv/con4       ---> Aceptado 
+cona/con4       ---> Aceptado 
+con5/con5       ---> Aceptado 
+con6/con5       ---> Aceptado 
+con7/con5       ---> Aceptado 
+con8/con5       ---> Aceptado 
+con9/con5       ---> Aceptado 
+con0/con5       ---> Aceptado 
+conv/con5       ---> Aceptado 
+cona/con5       ---> Aceptado 
+con6/con6       ---> Aceptado 
+con7/con6       ---> Aceptado 
+con8/con6       ---> Aceptado 
+con9/con6       ---> Aceptado 
+con0/con6       ---> Aceptado 
+conv/con6       ---> Aceptado 
+cona/con6       ---> Aceptado 
+con7/con7       ---> Aceptado 
+acon8/con7       ---> Aceptado 
 

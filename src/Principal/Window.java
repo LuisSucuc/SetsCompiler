@@ -2,6 +2,7 @@
 package Principal;
 
 import Analyzers.Lexical;
+import Analyzers.Semantic;
 import java.awt.Color;
 import java.awt.Component;
 import java.io.IOException;
@@ -212,8 +213,20 @@ public class Window extends javax.swing.JFrame {
         try {
             lexical.Analizar(ubicacionArchivo);
             response = lexical.getResult();
-            drawTable(response);
             
+            if (response.success) {
+                System.out.println("aceptadp");
+                checkLexical.setSelected(true);
+                
+                /*Semantic semantic = new Semantic();
+                semantic.Analizar(ubicacionArchivo);
+                response = lexical.getResult();
+                
+                if (response.success) {
+                    
+                }*/
+            }
+            drawTable(response);
             
             
         } catch (IOException ex) {

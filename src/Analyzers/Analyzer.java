@@ -11,11 +11,13 @@ public class Analyzer {
     public List<String> listaErrores;
     public List<String> inputs;
     public List<String> responses;
+    public boolean success;
 
     public Analyzer() {
          listaErrores = new ArrayList<String>();
          inputs       = new ArrayList<String>();
          responses    = new ArrayList<String>();
+         success      = true;
     }
     
     
@@ -32,7 +34,7 @@ public class Analyzer {
     }
      
      public Response getResult(){
-         return new Response(inputs, responses, false);
+         return new Response(inputs, responses, success);
      }
 
 
