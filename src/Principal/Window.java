@@ -215,22 +215,17 @@ public class Window extends javax.swing.JFrame {
             response = lexical.getResult();
             
             if (response.success) {
-                System.out.println("aceptadp");
                 checkLexical.setSelected(true);
                 
-                /*Semantic semantic = new Semantic();
+                Semantic semantic = new Semantic();
                 semantic.Analizar(ubicacionArchivo);
-                response = lexical.getResult();
-                
-                if (response.success) {
-                    
-                }*/
+                response = semantic.getResult();
             }
             drawTable(response);
             
             
         } catch (IOException ex) {
-            Logger.getLogger(Window.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("ERROR" + ex);
         }
     }//GEN-LAST:event_analyzeButtonActionPerformed
     
@@ -261,7 +256,7 @@ public class Window extends javax.swing.JFrame {
     }
     
     public void drawTable(Response response){
-        
+        clearTable();
         DefaultTableModel model = (DefaultTableModel) responseTable.getModel();
         for (int i = 0; i < response.inputs.size(); i++) {
             model.addRow(new Object[]{response.inputs.get(i), response.responses.get(i) });

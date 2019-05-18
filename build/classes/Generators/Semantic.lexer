@@ -29,7 +29,7 @@ LETRA_MAYUSCULA = [A-Z] | "Ñ" | "Á" | "É" | "Í"| "Ó" | "Ú"
 NUMERO          = 0 | [1-9][0-9]*
 ELEMENTO_GLOBAL = ( ( {LETRA_MINUSCULA} | {LETRA_MAYUSCULA} )+ { NUMERO } * )+
 
-OPERACION          = "OPERACION" | "operacion"
+OPERACION          = "OPERACION" | "operacion" | "OPERACIONES" | "operaciones"
 PARENTESIS_ABIERTO = "("
 PARENTESIS_CERRADO = ")"
 
@@ -44,7 +44,7 @@ COMPLEMENTO   = "^c"
 
 
 WHITE       = [\t]
-SPACE       = " "*
+SPACE       = " "* [\t]*
 //NUEVA_LINEA = \r|\n|\r\n|\t|\f
 NUEVA_LINEA = \r|\n|\r\n
 
@@ -58,9 +58,10 @@ ELEMENTOS_VACIO =     {SPACE} {IGUAL} {SPACE} {LLAVE_ABIERTA} {SPACE} {LLAVE_CER
 
 CONJUNTO =            {ELEMENTO_GLOBAL} {ELEMENTOS_CONJUNTO}
 CONJUNTO_VACIO =      {ELEMENTO_GLOBAL} {ELEMENTOS_VACIO}
+//CONJUNTO_VACIO =      {ELEMENTO_GLOBAL} {SPACE} {IGUAL} {SPACE} {LLAVE_ABIERTA} {SPACE} {LLAVE_CERRADA} {SPACE}
 CONJUNTO_UNIVERSO =   {SPACE} {UNIVERSO} {ELEMENTOS_CONJUNTO}
 
-ID_CONJUNTO  =        {SPACE} {LETRA_MAYUSCULA}+ {SPACE}
+ID_CONJUNTO  =        {SPACE} {ELEMENTO_GLOBAL} {SPACE}
 OPERACION_SIMBOLO =   {SPACE} (  {UNION} | {INTERSECCION} | {DIFERENCIA} | {PRODUCTO_CRUZ} ) {SPACE}
 OPERACION_BASICA =    {ID_CONJUNTO}  ( {OPERACION_SIMBOLO} {ID_CONJUNTO} )*
 OPERACION_LLAVES =    {PARENTESIS_ABIERTO} {OPERACION_BASICA} {PARENTESIS_CERRADO}
@@ -79,10 +80,13 @@ OPERACION_CONJUNTO =  { OPERACION_BASICA } | { OPERACION_LLAVES } | {DOS_OPERACI
 //Definiciones a retornar
 
 {DEFINICION}                {line_count=yyline;column_count=yycolumn; return DEFINICION;}
+{OPERACION}                 {line_count=yyline;column_count=yycolumn; return OPERACION;}
+
 {CONJUNTO_UNIVERSO}         {line_count=yyline;column_count=yycolumn; return CONJUNTO_UNIVERSO;}
 {CONJUNTO_VACIO}            {line_count=yyline;column_count=yycolumn; return CONJUNTO_VACIO;}
 {CONJUNTO}                  {line_count=yyline;column_count=yycolumn; return CONJUNTO;}
 {OPERACION_CONJUNTO}        {line_count=yyline;column_count=yycolumn; return OPERACION_CONJUNTO;}
+
 
 //Definiciones por defecto
 {NUEVA_LINEA}               {line_count=yyline;column_count=yycolumn; return NUEVA_LINEA;}

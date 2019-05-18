@@ -1,0 +1,10 @@
+DEFINICIONdefinicion       ---> Aceptado 
+CONJUNTO_UNIVERSOuniverso={"Aarón","Abdón","Abel","Abelardo","Abrahán","Absalón","Acacio","a2"}       ---> Aceptado 
+CONJUNTO_VACIOalgo   = {  }        ---> Aceptado 
+CONJUNTOcona={"aa"}       ---> Aceptado 
+
+OPERACIONoperaciones       ---> Aceptado 
+
+OPERACION_CONJUNTOcon1*con1       ---> Aceptado 
+OPERACION_CONJUNTOcon2*con1       ---> Aceptado 
+

@@ -6,6 +6,7 @@
 package Tools;
 
 import Generators.LexicalLexer;
+import Generators.SemanticLexer;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
@@ -22,9 +23,20 @@ public class Tools {
     public static String sumarTexto(String linea, LexicalLexer lexer) {
         return linea + lexer.yytext();
     }
+    
+    public static String textError(String cadenaTokens, SemanticLexer lexer) {
+        return cadenaTokens + "No reconocido '" + lexer.yytext() + "' en línea " + lexer.line_count + " columna " + lexer.column_count + ". ";
+    }
+    
+    public static String sumarTexto(String linea, SemanticLexer lexer) {
+        return linea + lexer.yytext();
+    }
+    
     public static void crearReporte(String texto) throws FileNotFoundException, UnsupportedEncodingException{
+        System.out.println("GENERANDO ARCHIVO");
         try (PrintWriter archivoReporte = new PrintWriter("Salida2.txt", "UTF-8")) {
             archivoReporte.println(texto);
+            archivoReporte.close();
         }
     }
     

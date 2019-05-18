@@ -1,0 +1,9 @@
+definicion
+universo={"Aarón","Abdón","Abel","Abelardo","Abrahán","Absalón","Acacio","a2"}
+algo   = {  } 
+cona={"aa"}
+
+operaciones
+
+con1*con1
+con2*con1
