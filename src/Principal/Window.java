@@ -6,8 +6,6 @@ import Analyzers.Semantic;
 import java.awt.Color;
 import java.awt.Component;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
@@ -15,12 +13,21 @@ import javax.swing.table.TableCellRenderer;
 
 public class Window extends javax.swing.JFrame {
     String ubicacionArchivo;
+    boolean test = false;
 
     public Window() {
         initComponents();
         analyzeButton.setEnabled(false);
         //centrar ventana
         this.setLocationRelativeTo(null);
+        if (test) {
+            testButton.setVisible(true);
+            pathLabel.setText("/home/luis/Dropbox/UMG/Compiladores/Proyecto Final/SetsCompiler/files/Prueba.txt");
+        }
+        else{
+            testButton.setVisible(false);
+        }
+        
     }
 
 
@@ -43,7 +50,7 @@ public class Window extends javax.swing.JFrame {
 
                 if(columnIndex == 1){
 
-                    if(value.equals("Aceptado"))
+                    if(String.valueOf(value).contains("Aceptado"))
                     {
 
                         componenet.setBackground(Color.GREEN);
@@ -73,6 +80,7 @@ public class Window extends javax.swing.JFrame {
         selectButton = new javax.swing.JButton();
         pathLabel = new javax.swing.JTextField();
         analyzeButton = new javax.swing.JButton();
+        testButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -142,6 +150,13 @@ public class Window extends javax.swing.JFrame {
             }
         });
 
+        testButton.setText("Test");
+        testButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                testButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -159,6 +174,8 @@ public class Window extends javax.swing.JFrame {
                         .addComponent(checkSintactic)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(checkSemantic)
+                        .addGap(199, 199, 199)
+                        .addComponent(testButton, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(analyzeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(scrollPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1245, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -172,7 +189,8 @@ public class Window extends javax.swing.JFrame {
                     .addComponent(checkLexical)
                     .addComponent(checkSintactic)
                     .addComponent(checkSemantic)
-                    .addComponent(analyzeButton))
+                    .addComponent(analyzeButton)
+                    .addComponent(testButton))
                 .addGap(18, 18, 18)
                 .addComponent(scrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -206,28 +224,12 @@ public class Window extends javax.swing.JFrame {
     }//GEN-LAST:event_selectButtonActionPerformed
 
     private void analyzeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_analyzeButtonActionPerformed
-        
-        clearTable();
-        Lexical lexical = new Lexical();
-        Response response;
-        try {
-            lexical.Analizar(ubicacionArchivo);
-            response = lexical.getResult();
-            
-            if (response.success) {
-                checkLexical.setSelected(true);
-                
-                Semantic semantic = new Semantic();
-                semantic.Analizar(ubicacionArchivo);
-                response = semantic.getResult();
-            }
-            drawTable(response);
-            
-            
-        } catch (IOException ex) {
-            System.out.println("ERROR" + ex);
-        }
+      compile();
     }//GEN-LAST:event_analyzeButtonActionPerformed
+
+    private void testButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testButtonActionPerformed
+        compile();
+    }//GEN-LAST:event_testButtonActionPerformed
     
     public void clearTable(){
         DefaultTableModel model = (DefaultTableModel) responseTable.getModel();
@@ -269,6 +271,35 @@ public class Window extends javax.swing.JFrame {
         //Cambia el texto en label de ubicacion archivo
         pathLabel.setText("");
         analyzeButton.setEnabled(false);
+    }
+    
+    public void compile(){
+        if (test) {
+            ubicacionArchivo = pathLabel.getText();
+        }
+       
+        
+        
+        clearTable();
+        Lexical lexical = new Lexical();
+        Response response;
+        try {
+            lexical.Analizar(ubicacionArchivo);
+            response = lexical.getResult();
+            
+            if (response.success) {
+                checkLexical.setSelected(true);
+                
+                Semantic semantic = new Semantic();
+                semantic.Analizar(ubicacionArchivo);
+                response = semantic.getResult();
+            }
+            drawTable(response);
+            
+            
+        } catch (IOException ex) {
+            System.out.println("ERROR" + ex);
+        }
     }
 
     public static void main(String args[]) {
@@ -315,5 +346,6 @@ public class Window extends javax.swing.JFrame {
     private javax.swing.JTable responseTable;
     private javax.swing.JScrollPane scrollPanel;
     private javax.swing.JButton selectButton;
+    private javax.swing.JButton testButton;
     // End of variables declaration//GEN-END:variables
 }

@@ -71,7 +71,7 @@ public class Semantic extends Analyzer{
                         }
                         else{        
                             textoArchivo = Tools.textoAceptado(textoArchivo, lineaActual);
-                            responses.add("Aceptado");                
+                            responses.add("Aceptado");
                          }
                         //Se limpia la cadenaOriginal y cadenaTokens
                         textoRespuesta = lineaActual = "";
@@ -89,7 +89,7 @@ public class Semantic extends Analyzer{
                     success = false;
                     break;
                 default:
-                    lineaActual = Tools.sumarTexto(lineaActual + token, lexer);
+                    lineaActual = Tools.sumarTexto(token + " - " + lineaActual ,  lexer);
             }
         }
     }

@@ -37,6 +37,8 @@
                       <Component id="checkSintactic" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="checkSemantic" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="199" max="-2" attributes="0"/>
+                      <Component id="testButton" min="-2" pref="237" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="analyzeButton" min="-2" pref="477" max="-2" attributes="0"/>
                   </Group>
@@ -55,6 +57,7 @@
                   <Component id="checkSintactic" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="checkSemantic" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="analyzeButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="testButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="scrollPanel" min="-2" pref="538" max="-2" attributes="0"/>
@@ -124,7 +127,7 @@
             </Property>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JTable()&#xa;{&#xa;    @Override&#xa;&#xa;    public Component prepareRenderer (TableCellRenderer renderer, int rowIndex, int columnIndex){&#xa;        Component componenet = super.prepareRenderer(renderer, rowIndex, columnIndex);&#xa;&#xa;        Object value = getModel().getValueAt(rowIndex,columnIndex);&#xa;&#xa;        if(columnIndex == 1){&#xa;&#xa;            if(value.equals(&quot;Aceptado&quot;))&#xa;            {&#xa;&#xa;                componenet.setBackground(Color.GREEN);&#xa;                componenet.setForeground(Color.BLACK);&#xa;&#xa;            }&#xa;            else{&#xa;&#xa;                // if date  equal current date&#xa;                componenet.setBackground(Color.RED);&#xa;                componenet.setForeground(Color.WHITE);&#xa;            }&#xa;&#xa;        }&#xa;&#xa;        else {&#xa;&#xa;            componenet.setBackground(Color.WHITE);&#xa;            componenet.setForeground(Color.BLACK);&#xa;        }&#xa;&#xa;        return componenet;&#xa;    }&#xa;&#xa;}&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JTable()&#xa;{&#xa;    @Override&#xa;&#xa;    public Component prepareRenderer (TableCellRenderer renderer, int rowIndex, int columnIndex){&#xa;        Component componenet = super.prepareRenderer(renderer, rowIndex, columnIndex);&#xa;&#xa;        Object value = getModel().getValueAt(rowIndex,columnIndex);&#xa;&#xa;        if(columnIndex == 1){&#xa;&#xa;            if(String.valueOf(value).contains(&quot;Aceptado&quot;))&#xa;            {&#xa;&#xa;                componenet.setBackground(Color.GREEN);&#xa;                componenet.setForeground(Color.BLACK);&#xa;&#xa;            }&#xa;            else{&#xa;&#xa;                // if date  equal current date&#xa;                componenet.setBackground(Color.RED);&#xa;                componenet.setForeground(Color.WHITE);&#xa;            }&#xa;&#xa;        }&#xa;&#xa;        else {&#xa;&#xa;            componenet.setBackground(Color.WHITE);&#xa;            componenet.setForeground(Color.BLACK);&#xa;        }&#xa;&#xa;        return componenet;&#xa;    }&#xa;&#xa;}&#xa;"/>
             <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Principal_jTable2"/>
           </AuxValues>
         </Component>
@@ -149,6 +152,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="analyzeButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="testButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Test"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="testButtonActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

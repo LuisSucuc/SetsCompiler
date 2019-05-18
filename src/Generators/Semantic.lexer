@@ -76,7 +76,6 @@ OPERACION_CONJUNTO =  { OPERACION_BASICA } | { OPERACION_LLAVES } | {DOS_OPERACI
 
 %%
 
-
 //Definiciones a retornar
 
 {DEFINICION}                {line_count=yyline;column_count=yycolumn; return DEFINICION;}
