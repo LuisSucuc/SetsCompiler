@@ -4,11 +4,11 @@ import Tools.Vars;
 import java.io.File;
 
 
-public class SemanticGenerator {
+public class SintacticGenerator {
 
   
     public static void main(String[] args) {
-        String ubicacion = Vars.url + "Semantic.lexer";
+        String ubicacion = Vars.url + "Sintactic.lexer";
         generarLexer(ubicacion);
     }
     

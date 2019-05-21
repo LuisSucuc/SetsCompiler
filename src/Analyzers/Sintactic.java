@@ -1,7 +1,7 @@
 
 package Analyzers;
 
-import Generators.SemanticLexer;
+import Generators.SintacticLexer;
 import Principal.Token;
 import static Principal.Token.*;
 import Tools.Tools;
@@ -12,14 +12,14 @@ import java.io.IOException;
 
 
 
-public class Semantic extends Analyzer{
+public class Sintactic extends Analyzer{
    
     public void Analizar(String ubicacionArchivo) throws FileNotFoundException, IOException{
         //Se crea el objeto que manipulará el archivo selecionado
 
         //ubicacionArchivo = "/home/luis/Dropbox/UMG/Compiladores/Proyectos/SetAnalyzer/Entrada.txt";
         //Se crea la instancia del analizador léxico (JFlex) y se le envía el archivo a analizar
-        SemanticLexer lexer = new SemanticLexer(new BufferedReader(new FileReader(ubicacionArchivo)));
+        SintacticLexer lexer = new SintacticLexer(new BufferedReader(new FileReader(ubicacionArchivo)));
 
         //String que guardará el texto original
         String lineaActual = "";

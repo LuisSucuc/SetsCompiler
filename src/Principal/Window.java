@@ -2,7 +2,7 @@
 package Principal;
 
 import Analyzers.Lexical;
-import Analyzers.Semantic;
+import Analyzers.Sintactic;
 import java.awt.Color;
 import java.awt.Component;
 import java.io.IOException;
@@ -13,7 +13,7 @@ import javax.swing.table.TableCellRenderer;
 
 public class Window extends javax.swing.JFrame {
     String ubicacionArchivo;
-    boolean test = false;
+    boolean test = true;
 
     public Window() {
         initComponents();
@@ -116,16 +116,9 @@ public class Window extends javax.swing.JFrame {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.Object.class
             };
-            boolean[] canEdit = new boolean [] {
-                true, false
-            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
             }
         });
         scrollPanel.setViewportView(responseTable);
@@ -166,7 +159,7 @@ public class Window extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(pathLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                         .addComponent(selectButton, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(checkLexical)
@@ -177,9 +170,12 @@ public class Window extends javax.swing.JFrame {
                         .addGap(199, 199, 199)
                         .addComponent(testButton, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(analyzeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(scrollPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(analyzeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(38, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(scrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -277,22 +273,22 @@ public class Window extends javax.swing.JFrame {
         if (test) {
             ubicacionArchivo = pathLabel.getText();
         }
-       
-        
         
         clearTable();
         Lexical lexical = new Lexical();
         Response response;
         try {
+            checkLexical.setSelected(true);
             lexical.Analizar(ubicacionArchivo);
             response = lexical.getResult();
             
             if (response.success) {
-                checkLexical.setSelected(true);
-                
-                Semantic semantic = new Semantic();
+               
+                checkSintactic.setSelected(true);
+                Sintactic semantic = new Sintactic();
                 semantic.Analizar(ubicacionArchivo);
                 response = semantic.getResult();
+                
             }
             drawTable(response);
             

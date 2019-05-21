@@ -1,9 +1,10 @@
 definicion
-universo={"Aarón","Abdón","Abel","Abelardo","Abrahán","Absalón","Acacio","a2"}
-algo   = {  } 
-cona={"aa"}
+universo={"Aa1ón","Abdón","Abel","111asd","Abrahán","Absalón",  "Acacio","a2"}
+{} = algo
+con a = {"aa"}
 
 operaciones
-
+con1*con2^c
 con1*con1
-con2*con1
+con2*con1 *con2*con1
+*^c

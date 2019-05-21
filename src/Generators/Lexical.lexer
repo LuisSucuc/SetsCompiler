@@ -12,24 +12,24 @@ import static Principal.Token.*;
 %column
 
 
-DEFINICION = "DEFINICION" | "definicion"
+DEFINICION        = "DEFINICION" | "DEFINICIONES" | "definicion" | "definiciones"
 
 
-UNIVERSO = "UNIVERSO" | "universo"
+UNIVERSO          = "UNIVERSO" | "universo"
 LLAVE_ABIERTA     = "{"
 LLAVE_CERRADA     = "}"
 COMA              = ","
 IGUAL             = "="
 COMILLA           = "\""
-COMILLAS           = "\""
 
 
-LETRA_MINUSCULA = [a-z] | "ñ" | "á" | "é" | "í" | "ó" | "ú"
-LETRA_MAYUSCULA = [A-Z] | "Ñ" | "Á" | "É" | "Í"| "Ó" | "Ú"
-NUMERO          = 0 | [1-9][0-9]*
-ELEMENTO_GLOBAL = ( ({LETRA_MINUSCULA} |  {LETRA_MAYUSCULA})+ {NUMERO} * )+
+LETRA_MINUSCULA   = [a-z] | "ñ" | "á" | "é" | "í" | "ó" | "ú"
+LETRA_MAYUSCULA   = [A-Z] | "Ñ" | "Á" | "É" | "Í"| "Ó" | "Ú"
+NUMERO            = 0 | [1-9][0-9]*
+NOMBRE_CONJUNTO   = ( ({LETRA_MINUSCULA} |  {LETRA_MAYUSCULA})+ {NUMERO} * )+
+ELEMENTO_CONJUNTO = ( {LETRA_MINUSCULA}* |  {LETRA_MAYUSCULA}* | {NUMERO} * )+
 
-OPERACION          = "OPERACION"
+OPERACION          = "OPERACION" | "OPERACIONES" | "operacion" | "operaciones"
 PARENTESIS_ABIERTO = "("
 PARENTESIS_CERRADO = ")"
 
@@ -49,25 +49,17 @@ SPACE       = " "*
 NUEVA_LINEA = \r|\n|\r\n
 
 
-CONTENIDO_ELEMENTO =  ({NUMERO}+|{LETRA_MINUSCULA}+|{LETRA_MAYUSCULA}+)+
-ELEMENTO =            {SPACE} {COMILLA} {CONTENIDO_ELEMENTO} {COMILLA} {SPACE}
+ELEMENTO =            {SPACE} {COMILLA} {ELEMENTO_CONJUNTO} {COMILLA} {SPACE}
 SEGUNDO_ELEMENTO =    {COMA} {ELEMENTO}
 
 
 ELEMENTOS_CONJUNTO =  {SPACE} {IGUAL} {SPACE} {LLAVE_ABIERTA} ({ELEMENTO} {SEGUNDO_ELEMENTO}*)+ {SPACE} {LLAVE_CERRADA} {SPACE}
 ELEMENTOS_VACIO =     {SPACE} {IGUAL} {SPACE} {LLAVE_ABIERTA} {SPACE} {LLAVE_CERRADA} {SPACE}
-
 CONJUNTO =            {LETRA_MAYUSCULA}+ {ELEMENTOS_CONJUNTO}
 CONJUNTO_VACIO =      {LETRA_MAYUSCULA}+ {ELEMENTOS_VACIO}
 CONJUNTO_UNIVERSO =   {SPACE} {UNIVERSO} {ELEMENTOS_CONJUNTO}
 
-ID_CONJUNTO  =        {SPACE} {LETRA_MAYUSCULA}+ {SPACE}
-OPERACION_SIMBOLO =   {SPACE} (  {UNION} | {INTERSECCION} | {DIFERENCIA} | {PRODUCTO_CRUZ} ) {SPACE}
-OPERACION_BASICA =    {ID_CONJUNTO}  ( {OPERACION_SIMBOLO} {ID_CONJUNTO} )*
-OPERACION_LLAVES =    {PARENTESIS_ABIERTO} {OPERACION_BASICA} {PARENTESIS_CERRADO}
-DOS_OPERACIONES =     {OPERACION_LLAVES}  ( ( ( {OPERACION_SIMBOLO} {ID_CONJUNTO} )*  {OPERACION_SIMBOLO} ) |  {OPERACION_SIMBOLO}  ){OPERACION_LLAVES}
 
-OPERACION_CONJUNTO =  { OPERACION_BASICA } | { OPERACION_LLAVES } | {DOS_OPERACIONES}
 %{
    public String lexeme;
    public int line_count;
@@ -76,33 +68,15 @@ OPERACION_CONJUNTO =  { OPERACION_BASICA } | { OPERACION_LLAVES } | {DOS_OPERACI
 
 %%
 
+{DEFINICION}                {return DEFINICION;}
+{OPERACION}                 {return OPERACION;}
 
-//Definiciones especiales
-
-{DEFINICION}                {line_count=yyline;column_count=yycolumn; return DEFINICION;}
-{CONJUNTO_UNIVERSO}         {line_count=yyline;column_count=yycolumn; return CONJUNTO_UNIVERSO;}
-{CONJUNTO_VACIO}            {line_count=yyline;column_count=yycolumn; return CONJUNTO_VACIO;}
-{CONJUNTO}                  {line_count=yyline;column_count=yycolumn; return CONJUNTO;}
-{OPERACION_CONJUNTO}        {line_count=yyline;column_count=yycolumn; return OPERACION_CONJUNTO;}
-
-//Definiciones por defecto
-{NUEVA_LINEA}               {line_count=yyline;column_count=yycolumn; return NUEVA_LINEA;}
-{WHITE}                     {/*Ignore*/}
-
-
-
-{OPERACION}                 {line_count=yyline;column_count=yycolumn; return OPERACION;}
-{COMPLEMENTO}               {line_count=yyline;column_count=yycolumn; return COMPLEMENTO;}
-
-
-
-
+{COMPLEMENTO}               {return COMPLEMENTO;}
 {OPERACION}                 {return OPERACION;}
 {PARENTESIS_ABIERTO}        {return PARENTESIS_ABIERTO;}
 {PARENTESIS_CERRADO}        {return PARENTESIS_CERRADO;}
 {UNION}                     {return UNION;}
 {UNIVERSO}                  {return UNIVERSO;}
-{COMILLAS}                  {return COMILLAS;}
 {INTERSECCION}              {return INTERSECCION;}
 {DIFERENCIA}                {return DIFERENCIA;}
 {PRODUCTO_CRUZ}             {return PRODUCTO_CRUZ;}
@@ -111,9 +85,18 @@ OPERACION_CONJUNTO =  { OPERACION_BASICA } | { OPERACION_LLAVES } | {DOS_OPERACI
 {IGUAL}                     {return IGUAL;}
 {LLAVE_ABIERTA}             {return LLAVE_ABIERTA;}
 {LLAVE_CERRADA}             {return LLAVE_CERRADA;}
-{ELEMENTO}                  {return ELEMENTO;}
+
 {SPACE}                     {return SPACE;}
-{ELEMENTO_GLOBAL}                     {return ELEMENTO_GLOBAL;}
+{NOMBRE_CONJUNTO}           {return NOMBRE_CONJUNTO;}
+
+{NUEVA_LINEA}               {return NUEVA_LINEA;}
+{WHITE}                     {/*Ignore*/}
+
+{CONJUNTO}                  {return CONJUNTO;}
+{CONJUNTO_VACIO}            {return CONJUNTO_VACIO;}
+{CONJUNTO_UNIVERSO}         {return CONJUNTO_UNIVERSO;}
+{ELEMENTO}                  {return ELEMENTO;}
 
 
+"\"\"" {line_count=yyline;column_count=yycolumn;return ERROR;}
 . {line_count=yyline;column_count=yycolumn;return ERROR;}

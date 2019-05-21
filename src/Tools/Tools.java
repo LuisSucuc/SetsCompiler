@@ -6,7 +6,7 @@
 package Tools;
 
 import Generators.LexicalLexer;
-import Generators.SemanticLexer;
+import Generators.SintacticLexer;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
@@ -24,11 +24,11 @@ public class Tools {
         return linea + lexer.yytext();
     }
     
-    public static String textError(String cadenaTokens, SemanticLexer lexer) {
+    public static String textError(String cadenaTokens, SintacticLexer lexer) {
         return cadenaTokens + "No reconocido '" + lexer.yytext() + "' en línea " + lexer.line_count + " columna " + lexer.column_count + ". ";
     }
     
-    public static String sumarTexto(String linea, SemanticLexer lexer) {
+    public static String sumarTexto(String linea, SintacticLexer lexer) {
         return linea + lexer.yytext();
     }
     
