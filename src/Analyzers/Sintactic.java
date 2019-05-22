@@ -2,6 +2,7 @@
 package Analyzers;
 
 import Generators.SintacticLexer;
+import Tools.Errors;
 import Principal.Token;
 import static Principal.Token.*;
 import Tools.Tools;
@@ -29,6 +30,7 @@ public class Sintactic extends Analyzer{
         String textoArchivo  = "";
         //Variable que definirá si se encontraron errores
         boolean errors = false;
+        boolean operacion = false;
 
         //Se crea un ciclo "infinito"
         //boolean line_operation = false;
@@ -40,7 +42,7 @@ public class Sintactic extends Analyzer{
 
             //Si se legó el final del archivo
             if (token == null){
-                System.out.println(responses);
+                //System.out.println(responses);
                 //if (!success) {
                 if (true) {
                     Tools.crearReporte(textoArchivo);
@@ -75,25 +77,62 @@ public class Sintactic extends Analyzer{
                          }
                         //Se limpia la cadenaOriginal y cadenaTokens
                         textoRespuesta = lineaActual = "";
-
+                        
                     break;
 
                 case ERROR:
-                    //System.out.println("error2");
                     lineaActual = Tools.sumarTexto(lineaActual, lexer);
+                    
                     if(!errors) {
-                        textoRespuesta = Tools.textError(textoRespuesta, lexer);
+                        
+                        if (operacion) {
+                            textoRespuesta = Errors.esperabaOperacion(textoRespuesta, lexer);
+                        }
+                        else{
+                            textoRespuesta = Errors.esperabaConjunto(textoRespuesta, lexer);
+                        }   
                     }
-
-                    errors = true;
+                    errors = true;                   
                     success = false;
                     break;
+
+                case CONJUNTO_ELEMENTOS_ERROR:
+                    lineaActual = Tools.sumarTexto(lineaActual, lexer);
+                     if(!errors) {
+                         textoRespuesta = Errors.elementosInvalidos(textoRespuesta, lexer);
+                    }
+                    errors = true;                   
+                    success = false;
+                    break;
+                    
+                 case CONJUNTO_FALTA_ELEMENTO_ERROR:
+                    lineaActual = Tools.sumarTexto(lineaActual, lexer);
+                     if(!errors) {
+                         textoRespuesta = Errors.elementoFaltante(textoRespuesta, lexer);
+                    }
+                    errors = true;                   
+                    success = false;
+                    break;
+                
+                case OPERACION_CONJUNTO_FALTANTE:
+                     
+                    lineaActual = Tools.sumarTexto(lineaActual, lexer);
+                     if(!errors) {
+                         textoRespuesta = Errors.elementoConjuntoFaltante(textoRespuesta, lexer);
+                    }
+                    errors = true;                   
+                    success = false;
+                    break;
+                    
                 default:
-                    lineaActual = Tools.sumarTexto(token + " - " + lineaActual ,  lexer);
+                    if(token == OPERACION){
+                        operacion = true;
+                    }
+                    lineaActual = Tools.sumarTexto(token + " - " + lineaActual , lexer);
             }
         }
     }
-     
+    
      
      
 }

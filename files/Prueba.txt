@@ -1,10 +1,14 @@
 definicion
 universo={"Aa1ón","Abdón","Abel","111asd","Abrahán","Absalón",  "Acacio","a2"}
+PAT1O = {}
 {} = algo
 con a = {"aa"}
+PAT1O = {a , aaaa,  }
+PAT1O = {"a" ,"aaaa",
+PAT1O = {
 
 operaciones
 con1*con2^c
-con1*con1
-con2*con1 *con2*con1
-*^c
+*con1/
+con2*con1 *con2*con1$/
+a^c

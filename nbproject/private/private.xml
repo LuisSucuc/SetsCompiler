@@ -2,6 +2,12 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/home/luis/Dropbox/UMG/Compiladores/Proyecto%20Final/SetsCompiler/src/Generators/LexicalGenerator.java</file>
+            <file>file:/home/luis/Dropbox/UMG/Compiladores/Proyecto%20Final/SetsCompiler/src/Principal/Token.java</file>
+            <file>file:/home/luis/Dropbox/UMG/Compiladores/Proyecto%20Final/SetsCompiler/src/Generators/SintacticGenerator.java</file>
+            <file>file:/home/luis/Dropbox/UMG/Compiladores/Proyecto%20Final/SetsCompiler/src/Principal/Window.java</file>
+            <file>file:/home/luis/Dropbox/UMG/Compiladores/Proyecto%20Final/SetsCompiler/src/Generators/LexicalLexer.java</file>
+        </group>
     </open-files>
 </project-private>

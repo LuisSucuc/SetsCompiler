@@ -45,8 +45,6 @@ public class Tools {
     }
     
     public static String textoConError(String textoArchivo, String lineaActual,String textoRespuesta  ){
-        //return textoArchivo + lineaActual + "       ---> Aceptado \n";
-        //System.out.println(lineaActual + "       ---> "+  textoRespuesta + "\n");
         return textoArchivo + lineaActual + "       ---> "+  textoRespuesta + "\n";
     }
     
