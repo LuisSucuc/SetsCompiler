@@ -1,5 +1,5 @@
 
-package Conjuntos;
+package Elementos;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,11 +60,11 @@ public class Conjunto {
     }
     
     public String noUniverso(){
-        System.out.println("\n \n \n"+ this.nombre);
+        //System.out.println("\n \n \n"+ this.nombre);
         String noUniverso = "";
         for (String elemento : elementosNoUniverso) {
             noUniverso = noUniverso + elemento + ", ";
-            System.out.println("No encontrado " + elemento);
+            //System.out.println("No encontrado " + elemento);
         }
         return noUniverso;
     }

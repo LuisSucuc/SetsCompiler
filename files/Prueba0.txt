@@ -1,3 +1,24 @@
+DEFINICION
+UNIVERSO = {"0", "1", "2", "3", "4", "5", "6", "7", "100", "arriba", "BARAJA", "Cama","a" }
+JUAN = { "1", "2", "3", "4" }
+MARIA = { "2", "3", "5", "6" }
+CARLOS = { "3", "5", "7", "8", "nada" }
+VERDURA = { "0" }
+PATO = { "a" }
+VACIO = { }
+OPERACION
+JUAN & MARIA
+JUAN&MARIA
+(JUAN&MARIA)
+JUAN$MARIA
+JUAN $ MARIA
+JUAN / MARIA
+JUAN^c & PATO^c
+MARIA * VERDURA
+PATO^c
+JUAN & MARIA & PATO
+
+
 definicion
 universo	= {"Aarón",	"Abdón",	"Abel",	"Abelardo",	"Abrahán",	"Absalón",	"Acacio","a2"}
 on1	=	{"0",	"1",	"2",	"3"}

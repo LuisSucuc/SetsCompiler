@@ -7,14 +7,6 @@ VERDURA = { "0" }       ---> Aceptado
 PATO = { "a" }       ---> Aceptado 
 VACIO = { }       ---> Aceptado 
 OPERACION       ---> Aceptado 
-JUAN & MARIA       ---> Aceptado 
-JUAN&MARIA       ---> Aceptado 
-(JUAN&MARIA)       ---> Aceptado 
-JUAN$MARIA       ---> Aceptado 
-JUAN $ MARIA       ---> Aceptado 
-JUAN / MARIA       ---> Aceptado 
-JUAN & PATO       ---> Aceptado 
-MARIA * VERDURA       ---> Aceptado 
-PATO^c       ---> Aceptado 
-JUAN & MARIA & PATO       ---> Aceptado 
+JUAN^c & PATO^c       ---> Aceptado 
+MRIO2^c       ---> Aceptado 
 

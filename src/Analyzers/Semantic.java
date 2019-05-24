@@ -1,7 +1,8 @@
 
 package Analyzers;
 
-import Conjuntos.Conjunto;
+import Elementos.Conjunto;
+import Elementos.Operacion;
 import Principal.Token;
 import static Principal.Token.*;
 import java.util.Hashtable;
@@ -27,10 +28,8 @@ public class Semantic extends Analyzer{
             String linea = inputs.get(posicion);
             
             switch (token) {
-                case DEFINICION:
-                    responses.add("Aceptado");
-                    break;
                 case OPERACION:
+                case DEFINICION:
                     responses.add("Aceptado");
                     break;
                 case CONJUNTO_UNIVERSO:
@@ -50,6 +49,11 @@ public class Semantic extends Analyzer{
                     }
                     
                     conjuntos.put(nuevo.getNombre(), nuevo);
+                    break;
+                 
+                case OPERACION_CONJUNTO:
+                    Operacion op = new Operacion(linea);
+                    responses.add("Pendiente");
                     break;
                 default:
                     responses.add("Pendiente");
