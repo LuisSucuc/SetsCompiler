@@ -2,6 +2,7 @@
 package Analyzers;
 
 import Generators.SintacticLexer;
+import Principal.Response;
 import Tools.Errors;
 import Principal.Token;
 import static Principal.Token.*;
@@ -10,6 +11,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+
 
 
 
@@ -28,6 +30,7 @@ public class Sintactic extends Analyzer{
         String textoRespuesta   = "";
         //String que concatenará el texto original y los tokens para guardarlo en el reporte y mostrarlo en el textarea
         String textoArchivo  = "";
+        Token previous = null;
         //Variable que definirá si se encontraron errores
         boolean errors = false;
         boolean operacion = false;
@@ -49,6 +52,9 @@ public class Sintactic extends Analyzer{
                 }
                 return;
             }
+            if (token != NUEVA_LINEA ){
+                previous = token;
+            }
 
             //Se evalúa el token encontrado
             switch (token){
@@ -57,6 +63,7 @@ public class Sintactic extends Analyzer{
                 case NUEVA_LINEA:
                     //Si las cadenas no están vacías (Esto se da cuando solo se encuentran errores)
                         inputs.add(lineaActual);
+                        tokens.add(previous);
                         
                         //Se guarda la cadenaOriginal leida y la cadena de tokens separada por una flecha
                         if("".equals(lineaActual) ){
@@ -128,11 +135,17 @@ public class Sintactic extends Analyzer{
                     if(token == OPERACION){
                         operacion = true;
                     }
-                    lineaActual = Tools.sumarTexto(token + " - " + lineaActual , lexer);
+                    //lineaActual = Tools.sumarTexto(token + " - " + lineaActual , lexer);
+                    lineaActual = Tools.sumarTexto(lineaActual , lexer);
+                    
             }
         }
     }
     
+    
+     public Response getResult(){
+         return new Response(inputs, responses, tokens, success);
+     }
      
      
 }

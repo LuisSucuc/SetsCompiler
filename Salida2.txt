@@ -1,15 +1,20 @@
-DEFINICION - definicion       ---> Aceptado 
-CONJUNTO_UNIVERSO - universo={"Aa1ón","Abdón","Abel","111asd","Abrahán","Absalón",  "Acacio","a2"}       ---> Aceptado 
-CONJUNTO_VACIO - PAT1O = {}       ---> Aceptado 
-{} = algo       ---> Se esperaba definición de conjunto
-CONJUNTO - con a = {"aa"}       ---> Se esperaba definición de conjunto
-PAT1O = {a , aaaa,  }       ---> Elementos de conjunto inválidos
-PAT1O = {"a" ,"aaaa",       ---> Elementos faltante, conjunto no finalizado
-PAT1O = {       ---> Elementos faltante, conjunto no finalizado
-
-OPERACION - operaciones       ---> Aceptado 
-OPERACION_CONJUNTO - con1*con2^c       ---> Aceptado 
-*con1/       ---> Conjunto faltante, operación no finalizada
-con2*con1 *con2*con1$/       ---> Conjunto faltante, operación no finalizada
-OPERACION_CONJUNTO - a^c       ---> Aceptado 
+DEFINICION       ---> Aceptado 
+UNIVERSO = {"0", "1", "2", "3", "4", "5", "6", "7", "100", "arriba", "BARAJA", "Cama","a" }       ---> Aceptado 
+JUAN = { "1", "2", "3", "4" }       ---> Aceptado 
+MARIA = { "2", "3", "5", "6" }       ---> Aceptado 
+CARLOS = { "3", "5", "7", "8", "nada" }       ---> Aceptado 
+VERDURA = { "0" }       ---> Aceptado 
+PATO = { "a" }       ---> Aceptado 
+VACIO = { }       ---> Aceptado 
+OPERACION       ---> Aceptado 
+JUAN & MARIA       ---> Aceptado 
+JUAN&MARIA       ---> Aceptado 
+(JUAN&MARIA)       ---> Aceptado 
+JUAN$MARIA       ---> Aceptado 
+JUAN $ MARIA       ---> Aceptado 
+JUAN / MARIA       ---> Aceptado 
+JUAN & PATO       ---> Aceptado 
+MARIA * VERDURA       ---> Aceptado 
+PATO^c       ---> Aceptado 
+JUAN & MARIA & PATO       ---> Aceptado 
 

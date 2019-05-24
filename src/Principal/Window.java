@@ -2,6 +2,7 @@
 package Principal;
 
 import Analyzers.Lexical;
+import Analyzers.Semantic;
 import Analyzers.Sintactic;
 import java.awt.Color;
 import java.awt.Component;
@@ -278,16 +279,27 @@ public class Window extends javax.swing.JFrame {
         Lexical lexical = new Lexical();
         Response response;
         try {
-            checkLexical.setSelected(true);
+            
             lexical.Analizar(ubicacionArchivo);
             response = lexical.getResult();
+            checkLexical.setSelected(true);
             
             if (response.success) {
                
+                
+                Sintactic sintactic = new Sintactic();
+                sintactic.Analizar(ubicacionArchivo);
+                response = sintactic.getResult();
                 checkSintactic.setSelected(true);
-                Sintactic semantic = new Sintactic();
-                semantic.Analizar(ubicacionArchivo);
-                response = semantic.getResult();
+                
+                
+                if (response.success) {
+                    Semantic semantic = new Semantic(response.inputs, response.tokens);
+                    semantic.Analizar();
+                    response = semantic.getResult();
+                    checkSemantic.setSelected(true);
+                    
+                }
                 
             }
             drawTable(response);
