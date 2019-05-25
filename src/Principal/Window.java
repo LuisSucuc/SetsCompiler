@@ -283,7 +283,7 @@ public class Window extends javax.swing.JFrame {
             lexical.Analizar(ubicacionArchivo);
             response = lexical.getResult();
             checkLexical.setSelected(true);
-            
+            System.out.println(response.inputs);
             if (response.success) {
                
                 
@@ -291,6 +291,7 @@ public class Window extends javax.swing.JFrame {
                 sintactic.Analizar(ubicacionArchivo);
                 response = sintactic.getResult();
                 checkSintactic.setSelected(true);
+                
                 
                 
                 if (response.success) {

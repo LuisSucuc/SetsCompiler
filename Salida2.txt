@@ -8,7 +8,7 @@ PATO = { "a" }       ---> Aceptado
 VACIO = { }       ---> Aceptado 
 
 OPERACION       ---> Aceptado 
-JUAN & MARIA       ---> Aceptado 
+JUAN & MARIA & PATO       ---> Aceptado 
 JUAN&MARIA       ---> Aceptado 
 (JUAN&MARIA)       ---> Aceptado 
 JUAN$MARIA       ---> Aceptado 
@@ -19,4 +19,5 @@ MARIA * VERDURA       ---> Aceptado
 PATO^c       ---> Aceptado 
 MARIA & VERDURA^c  JUAN / MARIA & PATO       ---> Aceptado 
 JUAN & MARIA & PATO       ---> Aceptado 
+MARIA & VERDURA^c & JUAN / MARIA & PATO       ---> Aceptado 
 

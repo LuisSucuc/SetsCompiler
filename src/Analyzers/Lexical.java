@@ -41,6 +41,29 @@ public class Lexical extends Analyzer{
 
             //Si se legó el final del archivo
             if (token == null){
+                /*
+                inputs.add(lineaActual);
+                        
+                        //Se guarda la cadenaOriginal leida y la cadena de tokens separada por una flecha
+                        if("".equals(lineaActual) ){
+                            textoArchivo = textoArchivo + "\n";
+                            responses.add("Aceptado");
+                            continue;
+                        }
+                        
+                        else if(errors){
+                            textoArchivo = Tools.textoConError(textoArchivo, lineaActual, textoRespuesta);
+                            responses.add(textoRespuesta);
+                            errors = false;
+
+                        }
+                        else{        
+                            textoArchivo = Tools.textoAceptado(textoArchivo, lineaActual);
+                            responses.add("Aceptado");                
+                         }
+                        //Se limpia la cadenaOriginal y cadenaTokens
+                        textoRespuesta = lineaActual = "";*/
+                        
                 if (!success) {
                     
                     Tools.crearReporte(textoArchivo);
