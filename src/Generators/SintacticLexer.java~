@@ -59,15 +59,16 @@ public class SintacticLexer {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\12\1\1\2\1\1\2\3\27\0\1\4\1\0"+
-    "\1\5\1\0\1\5\12\0\1\6\6\0\1\7\1\0"+
-    "\1\4\1\6\1\0\2\5\2\0\1\5\12\0\1\6"+
-    "\4\0\1\10\2\0\1\7\1\4\1\6\1\5\2\0"+
-    "\1\4\6\0\1\5\11\0\1\10\3\0\1\11\2\4"+
-    "\1\5\2\0\1\4\12\0\1\11\5\4\7\0\5\4"+
-    "\5\0\2\4\1\12\1\0\1\12\3\0\1\13\1\0"+
-    "\1\13\1\0\1\4\2\0\1\12\2\0\1\4\1\13"+
-    "\1\4\1\14\2\4\1\14\4\4";
+    "\1\0\12\1\1\2\1\1\2\3\17\0\1\4\7\0"+
+    "\1\5\1\0\1\6\1\0\1\6\12\0\1\4\1\0"+
+    "\2\4\3\0\1\7\1\0\1\5\1\4\1\0\2\6"+
+    "\2\0\1\6\12\0\2\4\3\0\1\10\2\0\1\7"+
+    "\1\5\1\4\1\6\2\0\1\5\6\0\1\6\6\0"+
+    "\1\4\2\0\1\10\3\0\1\11\2\5\1\6\2\0"+
+    "\1\5\12\0\1\11\5\5\7\0\5\5\5\0\2\5"+
+    "\1\12\1\0\1\12\3\0\1\13\1\0\1\13\1\0"+
+    "\1\5\2\0\1\12\2\0\1\5\1\13\1\5\1\14"+
+    "\2\5\1\14\4\5";
 
   private static int [] zzUnpackAction() {
     int [] result = new int[184];
@@ -368,13 +369,14 @@ public class SintacticLexer {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\1\11\14\1\1\11\27\0\1\1\1\0\1\1"+
-    "\1\0\1\1\12\0\1\1\6\0\1\1\1\0\2\1"+
-    "\1\0\2\1\2\0\1\1\12\0\1\1\4\0\1\1"+
-    "\2\0\4\1\2\0\1\1\6\0\1\11\11\0\1\1"+
-    "\3\0\4\1\2\0\1\1\12\0\6\1\7\0\5\1"+
-    "\5\0\3\1\1\0\1\1\3\0\1\1\1\0\1\1"+
-    "\1\0\1\1\2\0\1\1\2\0\13\1";
+    "\1\0\1\11\14\1\1\11\17\0\1\1\7\0\1\1"+
+    "\1\0\1\1\1\0\1\1\12\0\1\1\1\0\2\1"+
+    "\3\0\1\1\1\0\2\1\1\0\2\1\2\0\1\1"+
+    "\12\0\2\1\3\0\1\1\2\0\4\1\2\0\1\1"+
+    "\6\0\1\11\6\0\1\1\2\0\1\1\3\0\4\1"+
+    "\2\0\1\1\12\0\6\1\7\0\5\1\5\0\3\1"+
+    "\1\0\1\1\3\0\1\1\1\0\1\1\1\0\1\1"+
+    "\2\0\1\1\2\0\13\1";
 
   private static int [] zzUnpackAttribute() {
     int [] result = new int[184];
@@ -844,17 +846,17 @@ public class SintacticLexer {
             // fall through
           case 15: break;
           case 4: 
-            { line_count=yyline;column_count=yycolumn; return CONJUNTO_FALTA_ELEMENTO_ERROR;
+            { line_count=yyline;column_count=yycolumn; return OPERACION_CONJUNTO_FALTANTE;
             } 
             // fall through
           case 16: break;
           case 5: 
-            { line_count=yyline;column_count=yycolumn; return OPERACION_CONJUNTO;
+            { line_count=yyline;column_count=yycolumn; return CONJUNTO_FALTA_ELEMENTO_ERROR;
             } 
             // fall through
           case 17: break;
           case 6: 
-            { line_count=yyline;column_count=yycolumn; return OPERACION_CONJUNTO_FALTANTE;
+            { line_count=yyline;column_count=yycolumn; return OPERACION_CONJUNTO;
             } 
             // fall through
           case 18: break;

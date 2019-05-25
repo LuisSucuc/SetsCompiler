@@ -38,6 +38,10 @@ public class Errors {
     public static String elementoConjuntoFaltante(String cadenaTokens, SintacticLexer lexer) {
         return cadenaTokens + "Conjunto faltante, operación no finalizada" + lineaColumna(lexer);
     }
+    
+    public static String elementoSimboloFaltante(String cadenaTokens, SintacticLexer lexer) {
+        return cadenaTokens + "Simbolo faltante" + lineaColumna(lexer);
+    }
 
     
     

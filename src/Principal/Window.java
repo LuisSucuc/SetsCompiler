@@ -231,6 +231,10 @@ public class Window extends javax.swing.JFrame {
     public void clearTable(){
         DefaultTableModel model = (DefaultTableModel) responseTable.getModel();
         model.setRowCount(0);
+        //checkLexical.setSelected(true);
+        //checkSintactic.setSelected(true);
+        //checkSemantic.setSelected(true);
+        
     }
     
     public void setFile() {
@@ -271,6 +275,10 @@ public class Window extends javax.swing.JFrame {
     }
     
     public void compile(){
+        
+        checkLexical.setSelected(false);
+        checkSintactic.setSelected(false);
+        checkSemantic.setSelected(false);
         if (test) {
             ubicacionArchivo = pathLabel.getText();
         }
@@ -283,14 +291,13 @@ public class Window extends javax.swing.JFrame {
             lexical.Analizar(ubicacionArchivo);
             response = lexical.getResult();
             checkLexical.setSelected(true);
-            System.out.println(response.inputs);
             if (response.success) {
-               
-                
+                //System.out.println("SINTACTICO");
+                checkSintactic.setSelected(true);
                 Sintactic sintactic = new Sintactic();
                 sintactic.Analizar(ubicacionArchivo);
                 response = sintactic.getResult();
-                checkSintactic.setSelected(true);
+                
                 
                 
                 

@@ -130,6 +130,14 @@ public class Sintactic extends Analyzer{
                     errors = true;                   
                     success = false;
                     break;
+                case OPERACION_SIGNO_FALTANTE:
+                    lineaActual = Tools.sumarTexto(lineaActual, lexer);
+                     if(!errors) {
+                         textoRespuesta = Errors.elementoConjuntoFaltante(textoRespuesta, lexer);
+                    }
+                    errors = true;                   
+                    success = false;
+                    break;
                     
                 default:
                     if(token == OPERACION){
