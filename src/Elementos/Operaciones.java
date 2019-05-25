@@ -77,7 +77,18 @@ public class Operaciones {
         if (operacionComplemento(conjuntos, universo)) {
             return;
         }
-        else if (operacionOunion(conjuntos)) {
+        else if (operaciones(conjuntos, union.operador)) {
+            return;
+        }
+        
+        else if (operaciones(conjuntos, interseccion.operador)) {
+            return;
+        }
+         else if (operaciones(conjuntos, diferencia.operador)) {
+            return;
+        }
+        
+         else if (operaciones(conjuntos, productoCruz.operador)) {
             return;
         }
         
@@ -124,19 +135,32 @@ public class Operaciones {
     
     
     
-    private boolean operacionOunion(Hashtable<String, Conjunto> conjuntos){
+    private boolean operaciones(Hashtable<String, Conjunto> conjuntos, String operador){
         Set<String> resultadoOperacion = new HashSet<String>();
         int posicion = -1;
         System.out.println(elementos);
         
         for (String elemento : elementos) {
             posicion++;
-            if (!elemento.equals(union.operador)) { continue; }
+            if (!elemento.equals(operador)) { continue; }
             Conjunto conjunto1 =  conjuntos.get(elementos.get(posicion-1));
             Conjunto conjunto2 =  conjuntos.get(elementos.get(posicion+1));
             System.out.println("C1" +conjunto1.elementos);
             System.out.println("C2" + conjunto2.elementos);
-            resultadoOperacion =  union(conjunto1.elementos, conjunto2.elementos);
+            if (operador.equals(union.operador)) {
+                resultadoOperacion =  union(conjunto1.elementos, conjunto2.elementos);
+            }
+            else if(operador.equals(interseccion.operador)){
+                resultadoOperacion =  interseccion(conjunto1.elementos, conjunto2.elementos);
+            }
+            else if(operador.equals(diferencia.operador)){
+                resultadoOperacion =  diferencia(conjunto1.elementos, conjunto2.elementos);
+            }
+            
+            else if(operador.equals(productoCruz.operador)){
+                resultadoOperacion =  productoCruz(conjunto1.elementos, conjunto2.elementos);
+            }
+            
             System.out.println("Resultado" + resultadoOperacion);
             
             String key = getKey(posicion);
@@ -153,7 +177,7 @@ public class Operaciones {
             
             System.out.println(elementos);
         }
-        removeAll(elementos, union.operador);
+        removeAll(elementos, operador);
         removeAll(elementos, "---");
         System.out.println(elementos);
         
