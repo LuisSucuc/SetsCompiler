@@ -50,22 +50,7 @@ public class limpiarOperaciones {
     }
     
     
-    /*public static void main(String[] args) {
-      String c = "A*B/C&D^c$E/X";
-      List<String> complemento =  new ArrayList<String>();
-      complemento.add(c);
-      
-      complemento =  ordenarElementos(complemento, "/");
-      //System.out.println(complemento);
-      complemento =  ordenarElementos(complemento, "\\^c");
-      complemento =  ordenarElementos(complemento, "\\*");
-      complemento =  ordenarElementos(complemento, "\\$");
-      complemento =  ordenarElementos(complemento, "\\&");
-      System.out.println(c); 
-      System.out.println(complemento);
-    }*/
-    
-    
+     
     
     private static List<String> splitt(String str, String splitStr){
         String[] array = str.split(splitStr);
@@ -75,13 +60,6 @@ public class limpiarOperaciones {
         for (String string : array) {
             convertido.add(string);
         }
-        //System.out.println(convertido);
-        /*if ("\\^c".equals(splitStr)) {
-            String substring = str.length() > 2 ? str.substring(str.length() - 2) : str;
-            if ("^c".equals(substring)) {
-                convertido.add("^c");
-            }
-        }*/
         
         return convertido;
     }

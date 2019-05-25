@@ -2,7 +2,7 @@
 package Analyzers;
 
 import Elementos.Conjunto;
-import Elementos.Operacion;
+import Elementos.Operaciones;
 import Principal.Token;
 import static Principal.Token.*;
 import java.util.Hashtable;
@@ -12,11 +12,11 @@ import java.util.Map;
 
 public class Semantic extends Analyzer{
      
-    Map<String, Conjunto> conjuntos = new Hashtable<>(); 
+    Hashtable<String, Conjunto> conjuntos = new Hashtable<String, Conjunto>(); 
     Conjunto universo = new Conjunto();
     
     public Semantic(List<String> inputs, List<Token> tokens) {
-        System.out.println(tokens);
+        //System.out.println(tokens);
         this.inputs = inputs;
         this.tokens = tokens;
     }
@@ -47,13 +47,18 @@ public class Semantic extends Analyzer{
                     else{
                         responses.add("Aceptado");
                     }
-                    
                     conjuntos.put(nuevo.getNombre(), nuevo);
                     break;
                  
                 case OPERACION_CONJUNTO:
-                    Operacion op = new Operacion(linea);
-                    responses.add("Pendiente");
+                    Operaciones operacion = new Operaciones(linea);
+                    if(operacion.elementosValidos(conjuntos)){
+                        responses.add(operacion.resultadoFinal);
+                    }
+                    else{
+                        operacion.operar(conjuntos, universo);
+                        responses.add(operacion.resultadoFinal);
+                    }
                     break;
                 default:
                     responses.add("Pendiente");
@@ -61,7 +66,7 @@ public class Semantic extends Analyzer{
             }
             
         }
-        System.out.println(this.responses);
+        //System.out.println(this.responses);
         
     }
     

@@ -1,11 +1,11 @@
 DEFINICION
 UNIVERSO = {"0", "1", "2", "3", "4", "5", "6", "7", "100", "arriba", "BARAJA", "Cama","a" }
-JUAN = { "1", "2", "3", "4" }
+JUAN = { "1", "2", "3", "4","cualercossa" }
 MARIA = { "2", "3", "5", "6" }
 CARLOS = { "3", "5", "7", "8", "nada" }
 VERDURA = { "0" }
 PATO = { "a" }
 VACIO = { }
 OPERACION
-JUAN^c & PATO^c
-MRIO2^c
+PATO^c$MARIA^c
+MARIA^c

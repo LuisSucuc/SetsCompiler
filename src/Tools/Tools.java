@@ -33,7 +33,7 @@ public class Tools {
     }
     
     public static void crearReporte(String texto) throws FileNotFoundException, UnsupportedEncodingException{
-        System.out.println("GENERANDO ARCHIVO");
+        //System.out.println("GENERANDO ARCHIVO");
         try (PrintWriter archivoReporte = new PrintWriter("Salida2.txt", "UTF-8")) {
             archivoReporte.println(texto);
             archivoReporte.close();

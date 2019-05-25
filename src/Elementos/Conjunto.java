@@ -2,18 +2,24 @@
 package Elementos;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 public class Conjunto {
     
     String nombre;
-    public List<String> elementos;
+    public Set<String> elementos  = new HashSet<String>();
     public List<String> elementosNoUniverso;
 
     public Conjunto(){
-        elementos = new ArrayList<String>();
         elementosNoUniverso = new ArrayList<String>();
+    }
+
+    Conjunto(String nombre, Set<String> elementos) {
+        this.nombre = nombre;
+        this.elementos = elementos;
     }
     
     public void setElements(String conjuntoStr){

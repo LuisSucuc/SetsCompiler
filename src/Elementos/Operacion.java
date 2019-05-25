@@ -1,34 +1,45 @@
+
+
 package Elementos;
 
-import static Tools.limpiarOperaciones.ordenarElementos;
-
-import static Elementos.Operadores.*;
-import java.util.ArrayList;
-import java.util.List;
+import com.google.common.collect.Sets;
+import java.util.HashSet;
+import java.util.Set;
 
 
 public class Operacion {
-    public List<String> elementos = new ArrayList<String>();;
-    public List<String> elementosNoUniverso =  new ArrayList<String>();
     
-    public Operacion(String linea){
-        elementos.add(limpiarElementos(linea));
-        elementos = ordenarElementos( elementos, complemento );
-        elementos = ordenarElementos(elementos, interseccion);
-        elementos = ordenarElementos(elementos, diferencia);
-        elementos = ordenarElementos(elementos, complemento);
-        elementos = ordenarElementos(elementos, productoCruz);
-        elementos = ordenarElementos(elementos, union);
-        //System.out.println("LINEA");
-        System.out.println(elementos);
+    
+      public static  Set<String> union(Set<String> C1, Set<String> C2){
+        return Sets.union(C1, C2);
+    }
+       
+        
+    
+    public static Set<String> interseccion(Set<String> C1, Set<String> C2){
+        return Sets.intersection(C1, C2);
     }
     
-    
-    
-    
-    
-    private String limpiarElementos(String operacion){
-        return operacion.replace(" ", "").replace("(", "").replace(")", "");
+    public static Set<String> diferencia(Set<String> C1, Set<String> C2){
+        return Sets.difference(C1, C2);
     }
+    
+    public static Set<String> complemento(Set<String> C1, Set<String> C2){
+        return Sets.difference(C2, C1);
+    }
+    
+    public static Set<String> productoCruz(Set<String> C1, Set<String> C2){
+        Set<String>  set = new HashSet<String>();
+        for (String string1 : C1) {
+            for (String string2 : C2) {
+                set.add("(" + string1 + ", " + string2 +")" );
+            }
+        }
+        return set;
+    }
+    
+  
+  
+    
     
 }
