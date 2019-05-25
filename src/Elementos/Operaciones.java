@@ -73,7 +73,22 @@ public class Operaciones {
     }
     
     public void operar(Hashtable<String, Conjunto> conjuntos, Conjunto universo){
-        Set<String> resultadoComplemento = new HashSet<String>();
+        
+        if (operacionComplemento(conjuntos, universo)) {
+            return;
+        }
+        else if (operacionOunion(conjuntos)) {
+            return;
+        }
+        
+        
+        
+
+            
+    }
+    
+    private boolean operacionComplemento(Hashtable<String, Conjunto> conjuntos, Conjunto universo){
+        Set<String> resultadoOperacion = new HashSet<String>();
         int posicion = -1;
         
         for (String elemento : elementos) {
@@ -81,36 +96,81 @@ public class Operaciones {
             if (!elemento.equals(complemento.operador)) { continue; }
             Conjunto conjunto1 =  conjuntos.get(elementos.get(posicion-1));
             
-            resultadoComplemento =  complemento(conjunto1.elementos, universo.elementos);
+            resultadoOperacion =  complemento(conjunto1.elementos, universo.elementos);
             
-            String key = getKey(posicion);
-            conjuntos.put(key, new Conjunto(key, resultadoComplemento));
+            String key = getKeyComplemento(posicion);
+            conjuntos.put(key, new Conjunto(key, resultadoOperacion));
             
             if (elementos.size()>1) {
                 elementos.set(posicion-1,key);
             }
             else{
                 elementos.add(key);
-                resultadoFinal = resultadoFinal + resultadoComplemento;
-                return;
+                resultadoFinal = resultadoFinal + resultadoOperacion;
+                return true;
+            }
+            
+            //System.out.println(elementos);
+        }
+        removeAll(elementos, complemento.operador);
+        //System.out.println(elementos);
+        
+        if (elementos.size()==1) {
+            generarRespuesta(conjuntos);
+            
+        }
+        return elementos.size()==1;
+    }
+    
+    
+    
+    private boolean operacionOunion(Hashtable<String, Conjunto> conjuntos){
+        Set<String> resultadoOperacion = new HashSet<String>();
+        int posicion = -1;
+        System.out.println(elementos);
+        
+        for (String elemento : elementos) {
+            posicion++;
+            if (!elemento.equals(union.operador)) { continue; }
+            Conjunto conjunto1 =  conjuntos.get(elementos.get(posicion-1));
+            Conjunto conjunto2 =  conjuntos.get(elementos.get(posicion+1));
+            System.out.println("C1" +conjunto1.elementos);
+            System.out.println("C2" + conjunto2.elementos);
+            resultadoOperacion =  union(conjunto1.elementos, conjunto2.elementos);
+            System.out.println("Resultado" + resultadoOperacion);
+            
+            String key = getKey(posicion);
+            conjuntos.put(key, new Conjunto(key, resultadoOperacion));
+            
+            if (elementos.size()>1) {
+                elementos.set(posicion+1,key);
+                elementos.set(posicion-1,"---");
+            }
+            else{
+                elementos.add(key);
+                resultadoFinal = resultadoFinal + resultadoOperacion;
             }
             
             System.out.println(elementos);
         }
-        removeAll(elementos, complemento.operador);
+        removeAll(elementos, union.operador);
+        removeAll(elementos, "---");
         System.out.println(elementos);
         
         if (elementos.size()==1) {
             generarRespuesta(conjuntos);
-            return;
+            
         }
-
-        
+        return elementos.size()==1;
     }
     
     
-    private String getKey(int posicion){
+    private String getKeyComplemento(int posicion){
         return  "_" + elementos.get(posicion-1) + elementos.get(posicion);
+    }
+    
+    private String getKey(int posicion){
+        return  "_" + elementos.get(posicion-1) + elementos.get(posicion) +  elementos.get(posicion+1);
     }
     
     @SuppressWarnings("empty-statement")

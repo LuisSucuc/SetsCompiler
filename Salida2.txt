@@ -1,12 +1,14 @@
 DEFINICION       ---> Aceptado 
 UNIVERSO = {"0", "1", "2", "3", "4", "5", "6", "7", "100", "arriba", "BARAJA", "Cama","a" }       ---> Aceptado 
 JUAN = { "1", "2", "3", "4","cualercossa" }       ---> Aceptado 
-MARIA = { "2", "3", "5", "6" }       ---> Aceptado 
+MARIA = { "0", "1", "2", "3", "4", "5", "6", "7", "100", "arriba", "BARAJA", "Cama"}       ---> Aceptado 
 CARLOS = { "3", "5", "7", "8", "nada" }       ---> Aceptado 
 VERDURA = { "0" }       ---> Aceptado 
-PATO = { "a" }       ---> Aceptado 
+PATO = { "1", "2", "3", "4", "5", "6", "7", "100", "arriba", "BARAJA", "Cama","a" }       ---> Aceptado 
 VACIO = { }       ---> Aceptado 
 OPERACION       ---> Aceptado 
-PATO^c$MARIA^c       ---> Aceptado 
+PATO^c       ---> Aceptado 
 MARIA^c       ---> Aceptado 
+PATO^c&MARIA^c&PATO^c&MARIA^c       ---> Aceptado 
+PATO^c&MARIA^c       ---> Aceptado 
 
