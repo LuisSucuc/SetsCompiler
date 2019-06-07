@@ -14,7 +14,7 @@ import javax.swing.table.TableCellRenderer;
 
 public class Window extends javax.swing.JFrame {
     String ubicacionArchivo;
-    boolean test = true;
+    boolean test = false;
 
     public Window() {
         initComponents();

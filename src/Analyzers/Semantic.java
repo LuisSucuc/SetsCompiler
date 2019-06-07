@@ -5,6 +5,9 @@ import Elementos.Conjunto;
 import Elementos.Operaciones;
 import Principal.Token;
 import static Principal.Token.*;
+import Tools.Tools;
+import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +25,7 @@ public class Semantic extends Analyzer{
     }
     
     
-    public void Analizar(){
+    public void Analizar() throws FileNotFoundException, UnsupportedEncodingException{
         for (int posicion = 0; posicion < inputs.size(); posicion++) {
             Token token = tokens.get(posicion);
             String linea = inputs.get(posicion);
@@ -33,6 +36,10 @@ public class Semantic extends Analyzer{
                     responses.add("Aceptado");
                     break;
                 case CONJUNTO_UNIVERSO:
+                    Conjunto nuevo0 = new Conjunto();
+                    nuevo0.setElements(linea);
+                    conjuntos.put(nuevo0.getNombre(), nuevo0);
+                    
                     universo.setElements(linea);
                     responses.add("Aceptado");
                     break;
@@ -67,7 +74,11 @@ public class Semantic extends Analyzer{
             
         }
         //System.out.println(this.responses);
-        
+        String textoFinal = "";
+        for (int linea = 0; linea < inputs.size(); linea++) {
+            textoFinal = textoFinal + inputs.get(linea) +  "                                             >>>>>>>>>          " + responses.get(linea) + "\n";
+        }
+        Tools.crearReporte(textoFinal);
     }
     
     

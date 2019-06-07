@@ -1,0 +1,27 @@
+definicion
+universo= {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74" "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100",  "Aarón", "Abdón", "Abel", "Abelardo", "Abrahán", "Absalón", "Acacio", "Adalberto", "Adán", "Adela", "Adelaida", "Adolfo", "Adón", "Adrián", "Agueda", "Agustín", "Alberto", "Albina", "Alejandro", "Alejo", "Alfonso", "Alfredo", "Alicia", "Alipio", "Almudena", "Alvaro", "Amadeo", "Amaro", "Ambrosio", "AmeliaoAmalia", "Ana", "Ananías", "Anastasia", "Anatolio", "Andrés", "Ángel", "Anselmo", "Antero", "Antonio", "Aquiles", "Araceli", "Aránzazu", "Arcadio", "Aresio", "Ariadna", "Aristides", "Arnaldo", "Artemio", "Arturo", "Atanasio", "Augusto", "Áurea", "Aurelia", "Aureliano", "Aurelio", "Baldomero", "Balduino", "Baltasar", "Bárbara", "Bartolomé", "Basileo", "Beatriz", "Belén", "Beltrán", "Benedicto", "Benigno", "Benjamín", "Bernabé", "Bernardo", "Blanca", "Blas", "Bonifacio", "Bruno", "Calixto", "Camilo", "Cándida", "Carina", "Carlos", "Carmen", "Casiano", "Casimiro", "Casio", "Catalina", "Cayetano", "Cayo", "Cecilia", "Ceferino", "Celia", "Celso", "Cesáreo", "Cipriano", "Cirilo", "Cirino", "Ciro", "Claudio", "Cleofás", "Clotilde", "Colombo", "Columba", "Columbano", "Conrado", "Constancio", "Constantino", "Cosme", "Cristina", "Cristóbal", "Daciano", "Dacio", "Dámaso", "Damián", "Daniel", "Dario", "David", "Demócrito", "Diego", "Dimas", "Domingo", "Donato", "Dorotea", "Edmundo", "Eduardo", "Eduvigis", "Efrén", "Elena", "Elías", "Elisa", "Eliseo", "Emiliano", "Emilio", "Enrique", "Epifanía", "Erico", "Ernesto", "Esdras", "Esiquio", "Esteban", "Ester", "Eugenia", "Eulalia", "Eusebio", "Eva", "Evaristo", "Ezequiel", "Fabián", "Fabio", "Fabiola", "Facundo", "Faustino", "Fausto", "Federico", "Feliciano", "Felipe", "Félix", "Fermín", "Fernando", "Fidel", "Fortunato", "Francisco", "Fulgencio", "Gabriel", "Genoveva", "Gerardo", "Germán", "Gertrudis", "Gisela", "Godofredo", "Gonzalo", "Gregorio", "Guadalupe", "Guido", "Guillermo", "Guzmán", "Heliodoro", "Heraclio", "Heriberto", "Hilarión", "Hildegarda", "Homero", "Honorato", "Honorio", "Hugo", "Humberto", "Ifigenia", "Ignacio", "Ildefonso", "Inés", "Inmaculada", "Inocencio", "Irene", "Ireneo", "Isaac", "Isabel", "Isaias", "Ismael", "Ivon", "Jacinto", "Jacob", "Jaime", "Javier", "Jeremías", "Jerónimo", "Jesús", "Joaquím", "Joel", "Jonás", "Jorge", "Josafat", "José", "Josué", "Juan", "Julián", "Justino", "Juvenal", "Ladislao", "Laura", "Laureano", "Lázaro", "Leandro", "Leocadia", "Leonardo", "Leoncio", "Leonor", "Leopoldo", "Lidia", "Liduvina", "Lino", "Lorenzo", "Lucano", "Lucas", "Lucía", "Luciano", "Lucrecia", "Luis", "Macario", "Magdalena", "Manuel", "Marcelino", "Marcelo", "Marcial", "Marciano", "Marcos", "Margarita", "María", "Mariano", "Marina", "Mario", "Marta", "Martín", "Mateo", "Matías", "Matilde", "Mauricio", "Maximiliano", "Melchor", "Mercedes", "Miguel", "Miqueas", "Moisés", "Mónica", "Montserrat", "Narciso", "Natalia", "Nazario", "Nemesio", "Nicanor", "Nicodemo", "Nicolás", "Nicomedes", "Nieves", "Noé", "Norberto", "Octavio", "Odón", "Onésimo", "Orestes", "Oriol", "Óscar", "Oseas", "Oswaldo", "Otilia", "Oto", "Pablo", "Pancracio", "Patricio", "Paula", "Pedro", "Petronila", "Pío", "Poncio", "Porfirio", "Primo", "Priscila", "Probo", "Rafael", "Raimundo", "Ramiro", "Ramón", "Raúl", "Rebeca", "Reinaldo", "Renato", "Ricardo", "Rigoberto", "Rita", "Roberto", "Rodrigo", "Rogelio", "Román", "Romualdo", "Roque", "Rosalia", "Rosario", "Rosendo", "Rufo", "Ruperto", "Salomé", "Salomón", "Salvador", "Salvio", "Samuel", "Sansón", "Santiago", "Sara", "Sebastián", "Segismundo", "Sergio", "Severino", "Simeón", "Simón", "Siro", "Sixto", "Sofía", "Susana", "Tadeo", "Tarsicio", "Teodora", "Teodosia", "Teófanes", "Teófila", "Teresa", "Timoteo", "Tito", "Tobías", "Tomás", "Toribio", "Ubaldo", "Urbano", "Ursula", "Valentín", "Valeriano", "Velerio", "Venancio", "Verónica", "Vicente", "Víctor", "Victorino", "Victorio", "Vidal", "Virgilio", "Vladimiro", "Wilfredo", "Zacarías", "Zaqueo", "Rojo", "Azul", "Verde", "Amarillo", "reloj", "camión", "pelota", "cuadro", "i", "ii", "iii", "iv", "v", "1E10", "ñ", "Ñ", "0"}
+con2 = {"Enrique", "Epifanía", "Erico", "Ernesto"}
+con3 = {"Rojo", "Azul", "Verde", "Amarillo"}
+con4 = {"11", "22", "33", "44", "55","66","77", "88","99"}
+con5 = {"10","20","30","40","50","60","80","90", "100"}
+con6 = {"reloj", "camión", "pelota", "cuadro"}
+con7 = {"moto", "carro", "avión", "barco", "tractor"}
+con8 = {"i","ii","iii","iv","v"}
+con9 = {"moto"}
+con0 = {"carro","1E10"}
+conv = {}
+cona = {"ñ","Ñ"}
+
+operaciones
+con1^c
+con2^c
+con3^c
+con4^c
+con5^c
+con6^c
+con7^c
+con8^c
+con9^c
+con0^c
+conv^c
+cona^c

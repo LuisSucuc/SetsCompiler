@@ -1,0 +1,6 @@
+definicion
+universo={"0","0", "1"}
+con1={"1"}
+
+operaciones
+universo&con1
